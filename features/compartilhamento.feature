@@ -1,7 +1,7 @@
 Feature:  compartilhar playlist  
     As an owner of the playlist  
     I want to be able to share a playlist
-
+    So that manage my preferences
 
 
     Scenario: compartilhar musica

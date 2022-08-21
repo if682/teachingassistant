@@ -1,7 +1,7 @@
 Feature: Criar categorias para PlayList
     As an user of the music app 
     I want to create, edite and modify categories  in the app
-    So that 
+    So that manage my preferences in the categories of playList
 
 
     # Scenario: Criar uma categoria  

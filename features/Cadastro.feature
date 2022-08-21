@@ -1,6 +1,7 @@
 Feature: Cadastro e Manutenção
     As an user of the music app 
     I want to add, remove and modify music list in the app
+    So that manage my preferences in registration of the playList
 
     ## Cadastro e Manutenção de Playlists (criar, atualizar, deletar):
     Scenario: Criar uma PlayList
