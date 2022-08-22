@@ -24,3 +24,8 @@ Feature:  Seguidores de uma PlayList
         When  clica em "salvar" "nome_playlist" 
         Then  a playlist é salva na sua biblioteca de Playlists 
         And   ela passa fazer integrar sua lista de playlists
+        
+        
+        
+        
+        
