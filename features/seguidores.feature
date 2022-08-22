@@ -19,7 +19,7 @@ Feature:  Seguidores de uma PlayList
         And   ela passa deixa de fazer parte de sua biblioteca de playlists
 
 
-Scenario: Salvar uma playlist
+    Scenario: Salvar uma playlist
         Given dado que o seguidor "nome_seguidor" tenha acesso a uma playlist que foi compartilhada 
         When  clica em "salvar" "nome_playlist" 
         Then  a playlist é salva na sua biblioteca de Playlists 
