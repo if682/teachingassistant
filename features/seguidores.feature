@@ -17,3 +17,10 @@ Feature:  Seguidores de uma PlayList
         When  clica em "deixar de seguir_playlist" 
         Then  ele deixa a seguir a Playlist 
         And   ela passa deixa de fazer parte de sua biblioteca de playlists
+
+
+Scenario: Salvar uma playlist
+        Given dado que o seguidor "nome_seguidor" tenha acesso a uma playlist que foi compartilhada 
+        When  clica em "salvar" "nome_playlist" 
+        Then  a playlist é salva na sua biblioteca de Playlists 
+        And   ela passa fazer integrar sua lista de playlists
