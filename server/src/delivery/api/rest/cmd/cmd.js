@@ -24,7 +24,7 @@ class CmdRest {
         const server = http.createServer(this.app)
 
         server.listen(PORT, () => {
-            console.log(`Server is Running... at port ${PORT}. TA BOM AGORA BIGODINHO?`)
+            console.log(`Server is Running... at port ${PORT}`)
         })
     }
 }
