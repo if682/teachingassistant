@@ -32,6 +32,8 @@ class DeletePlaylistUseCaseValidate {
         if (isEmpty(req.id)) return 'O identificador de playlist não pode ser vazio.'
         if (!isNumber(req.id)) return 'O identificador de playlist tem que ser um número.'
         if (!getPlaylist(req.id)) return 'Não existe playlist com esse identificador no banco'
+
+        return null
     }
 }
 
@@ -39,6 +41,8 @@ class ListPlaylistsByNameUseCaseValidate {
     listPlaylistsByName(req) {
         if (isEmpty(req.accountID)) return 'O identificador de usuário não pode ser vazio.'
         if (!isNumber(req.accountID)) return 'O identificador de usuário tem que ser um número.'
+
+        return null
     }
 }
 
@@ -46,6 +50,15 @@ class ListPlaylistsByRelevanceUseCaseValidate {
     listPlaylistsByRelevance(req) {
         if (isEmpty(req.accountID)) return 'O identificador de usuário não pode ser vazio.'
         if (!isNumber(req.accountID)) return 'O identificador de usuário tem que ser um número.'
+
+        return null
+    }
+}
+
+class DownloadPlaylistUseCaseValidate {
+    downloadPlaylist(req) {
+        if (isEmpty(req.id)) return 'O identificador de playlist não pode ser vazio.'
+        return null
     }
 }
 
@@ -55,5 +68,7 @@ export {
     UpdatePlaylistUseCaseValidate,
     DeletePlaylistUseCaseValidate,
     ListPlaylistsByNameUseCaseValidate,
-    ListPlaylistsByRelevanceUseCaseValidate
+    ListPlaylistsByRelevanceUseCaseValidate,
+    DownloadPlaylistUseCaseValidate
+
 }

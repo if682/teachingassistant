@@ -84,6 +84,19 @@ class ListPlaylistsByRelevanceUseCaseResponse {
     }
 }
 
+class DownloadPlaylistUseCaseRequest {
+    constructor(id) {
+        this.id = id
+    }
+}
+
+class DownloadPlaylistUseCaseResponse {
+    constructor(urls, error) {
+        this.urls = urls
+        this.error = error
+    }
+}
+
 export {
     CreatePlaylistUseCaseRequest,
     CreatePlaylistUseCaseResponse,
@@ -96,5 +109,7 @@ export {
     ListPlaylistsByNameUseCaseRequest,
     ListPlaylistsByNameUseCaseResponse,
     ListPlaylistsByRelevanceUseCaseRequest,
-    ListPlaylistsByRelevanceUseCaseResponse
+    ListPlaylistsByRelevanceUseCaseResponse,
+    DownloadPlaylistUseCaseRequest,
+    DownloadPlaylistUseCaseResponse
 }

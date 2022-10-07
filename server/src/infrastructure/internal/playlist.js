@@ -111,6 +111,19 @@ function listPlaylistsByRelevance(accountID) {
     return playlists ? playlists : []
 }
 
+function downloadPlaylist(id) {
+    let table = readDB('playlists')
+    let musics_table = readDB('musics')
+    urls = []
+    playlist = table.find(el => el.id === id )
+    for (let i = 0; i < playlists.musics.length ; i = i+1) {
+        let el  = playlists.musics
+        let music = musics_table.find(e=> e.id === el[i])
+        urls.append(music.url)
+    }
+    return urls
+}
+
 export {
     createPlaylist,
     getPlaylist,

@@ -40,11 +40,18 @@ class ListPlaylistsByRelevanceUseCaseRepository {
     }
 }
 
+class DownloadPlaylistUseCaseRepository {
+    downloadPlaylist(id) {
+        return downloadPlaylist(id)
+    }
+}
+
 export {
     CreatePlaylistUseCaseRepository,
     GetPlaylistUseCaseRepository,
     UpdatePlaylistUseCaseRepository,
     DeletePlaylistUseCaseRepository,
     ListPlaylistsByNameUseCaseRepository,
-    ListPlaylistsByRelevanceUseCaseRepository
+    ListPlaylistsByRelevanceUseCaseRepository,
+    DownloadPlaylistUseCaseRepository
 }
