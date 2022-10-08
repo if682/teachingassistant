@@ -144,7 +144,7 @@ class DownloadPlaylistController {
         if (ucRes.error) {
             return new InternalServerErrorResponse().internalServerError(res, ucRes.error)
         } else {
-            return new SuccessResponse().success(res, ucRes.playlists)
+            return new SuccessResponse().success(res, ucRes.urls)
         }
     }
 }

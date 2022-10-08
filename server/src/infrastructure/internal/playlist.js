@@ -20,7 +20,6 @@ function nextInt(table) {
 
     let maxIndex = 1
     if (table.length === 0 || (table.length === 1 && table[0] === null) ) return 1 
-    console.log('chega aqui')
     for (let i = 0; i<table.length; i = i+1) {
         if (maxIndex <= table[i].id) {
             maxIndex = table[i].id + 1
@@ -36,7 +35,6 @@ function nextInt(table) {
 function createPlaylist(name, image, accountID, category) {
     
     let table = readDB('playlists')
-    console.log(table)
     
 
     const playlist = {  
@@ -112,14 +110,15 @@ function listPlaylistsByRelevance(accountID) {
 }
 
 function downloadPlaylist(id) {
-    let table = readDB('playlists')
+    let playlists_table = readDB('playlists')
     let musics_table = readDB('musics')
-    urls = []
-    playlist = table.find(el => el.id === id )
-    for (let i = 0; i < playlists.musics.length ; i = i+1) {
-        let el  = playlists.musics
+    let urls = []
+    let playlist = playlists_table.find(el => el.id === id )
+    for (let i = 0; i < playlist.musics.length ; i = i+1) {
+        let el  = playlist.musics
+
         let music = musics_table.find(e=> e.id === el[i])
-        urls.append(music.url)
+        urls.push(music.url)
     }
     return urls
 }
@@ -130,5 +129,6 @@ export {
     updatePlaylist,
     deletePlaylist,
     listPlaylistsByName,
-    listPlaylistsByRelevance
+    listPlaylistsByRelevance,
+    downloadPlaylist
 }
