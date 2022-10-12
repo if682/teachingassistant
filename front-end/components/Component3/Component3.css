@@ -1,0 +1,27 @@
+.component-3,
+.component-3-1 {
+  align-items: flex-start;
+  align-self: flex-end;
+  border: 1px none;
+  display: flex;
+  min-width: 22px;
+}
+
+.overlap-group-4,
+.overlap-group-5 {
+  height: 22px;
+  position: relative;
+  width: 22px;
+}
+
+.rectangle-289,
+.rectangle-289-1 {
+  background-color: var(--mist-gray);
+  border: 1.29px none;
+  height: 1px;
+  left: 4px;
+  position: absolute;
+  top: 10px;
+  width: 14px;
+}
+

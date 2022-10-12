@@ -1,0 +1,37 @@
+<svg width="187" height="216" viewBox="0 0 187 216" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_f_3_43)">
+<mask id="mask0_3_43" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="46" y="46" width="96" height="124">
+<mask id="mask1_3_43" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="46" y="46" width="96" height="124">
+<mask id="mask2_3_43" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="46" y="46" width="96" height="124">
+<mask id="mask3_3_43" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="46" y="46" width="96" height="124">
+<mask id="mask4_3_43" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="46" y="46" width="100" height="124">
+<rect x="46.1837" y="46.649" width="99.7711" height="123.164" rx="6.09891" fill="#366F28"/>
+</mask>
+<g mask="url(#mask4_3_43)">
+<rect x="45.3389" y="46.649" width="95.7805" height="123.164" fill="#366F28"/>
+</g>
+</mask>
+<g mask="url(#mask3_3_43)">
+<rect x="45.3389" y="46.649" width="95.7805" height="123.164" fill="#366F28"/>
+</g>
+</mask>
+<g mask="url(#mask2_3_43)">
+<rect x="34.6145" y="28.924" width="117.23" height="150.746" fill="#366F28"/>
+</g>
+</mask>
+<g mask="url(#mask1_3_43)">
+<rect x="45.3389" y="46.649" width="95.7805" height="123.164" fill="#366F28"/>
+</g>
+</mask>
+<g mask="url(#mask0_3_43)">
+<rect x="41.5092" y="46.6485" width="103.441" height="133.014" fill="#366F28"/>
+</g>
+</g>
+<defs>
+<filter id="filter0_f_3_43" x="0.441864" y="0.907196" width="186.419" height="214.647" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="22.8709" result="effect1_foregroundBlur_3_43"/>
+</filter>
+</defs>
+</svg>

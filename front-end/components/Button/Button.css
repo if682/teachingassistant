@@ -1,0 +1,129 @@
+.button {
+  align-items: flex-start;
+  border: 1px none;
+  display: flex;
+  height: 43px;
+  padding: 10.3px 10.3px;
+  width: 43px;
+}
+
+.switch-horizontal {
+  height: 21px;
+  width: 21px;
+}
+
+.button.button-1,
+.button.button-1-1,
+.button.button-1-2,
+.button.button-3,
+.button.button-3-1,
+.button.button-3-2,
+.button.button-5,
+.button.button-5-1,
+.button.button-5-2,
+.button.button-7,
+.button.button-7-1,
+.button.button-7-2,
+.button.button-9,
+.button.button-9-1,
+.button.button-9-2,
+.button.button-11,
+.button.button-11-1,
+.button.button-11-2,
+.button.button-13,
+.button.button-13-1,
+.button.button-13-2,
+.button.button-15,
+.button.button-15-1,
+.button.button-15-2,
+.button.button-17,
+.button.button-17-1,
+.button.button-17-2,
+.button.button-19,
+.button.button-19-1,
+.button.button-19-2,
+.button.button-26,
+.button.button-26-1,
+.button.button-26-2,
+.button.button-21,
+.button.button-21-1,
+.button.button-21-2,
+.button.button-23,
+.button.button-23-1,
+.button.button-23-2,
+.button.button-23-3,
+.button.button-23-4,
+.button.button-23-5,
+.button.button-28,
+.button.button-28-1,
+.button.button-28-2,
+.button.button-25,
+.button.button-25-1,
+.button.button-25-2 {
+  align-items: unset;
+  display: unset;
+  height: 42.67px;
+  min-width: 42.67px;
+  padding: unset;
+  position: relative;
+  width: unset;
+}
+
+.button.button-1-1 .switch-horizontal,
+.button.button-1-2 .switch-horizontal,
+.button.button-1 .switch-horizontal,
+.button.button-3-1 .switch-horizontal,
+.button.button-3-2 .switch-horizontal,
+.button.button-3 .switch-horizontal,
+.button.button-5-1 .switch-horizontal,
+.button.button-5-2 .switch-horizontal,
+.button.button-5 .switch-horizontal,
+.button.button-7-1 .switch-horizontal,
+.button.button-7-2 .switch-horizontal,
+.button.button-7 .switch-horizontal,
+.button.button-9-1 .switch-horizontal,
+.button.button-9-2 .switch-horizontal,
+.button.button-9 .switch-horizontal,
+.button.button-11-1 .switch-horizontal,
+.button.button-11-2 .switch-horizontal,
+.button.button-11 .switch-horizontal,
+.button.button-13-1 .switch-horizontal,
+.button.button-13-2 .switch-horizontal,
+.button.button-13 .switch-horizontal,
+.button.button-15-1 .switch-horizontal,
+.button.button-15-2 .switch-horizontal,
+.button.button-15 .switch-horizontal,
+.button.button-17-1 .switch-horizontal,
+.button.button-17-2 .switch-horizontal,
+.button.button-17 .switch-horizontal,
+.button.button-19-1 .switch-horizontal,
+.button.button-19-2 .switch-horizontal,
+.button.button-19 .switch-horizontal,
+.button.button-26-1 .switch-horizontal,
+.button.button-26-2 .switch-horizontal,
+.button.button-26 .switch-horizontal,
+.button.button-21-1 .switch-horizontal,
+.button.button-21-2 .switch-horizontal,
+.button.button-21 .switch-horizontal,
+.button.button-23-1 .switch-horizontal,
+.button.button-23-2 .switch-horizontal,
+.button.button-23-3 .switch-horizontal,
+.button.button-23-4 .switch-horizontal,
+.button.button-23-5 .switch-horizontal,
+.button.button-23 .switch-horizontal,
+.button.button-28-1 .switch-horizontal,
+.button.button-28-2 .switch-horizontal,
+.button.button-28 .switch-horizontal,
+.button.button-25-1 .switch-horizontal,
+.button.button-25-2 .switch-horizontal,
+.button.button-25 .switch-horizontal {
+  left: 10px;
+  position: absolute;
+  top: 10px;
+}
+
+.button.button-27,
+.button.button-29 {
+  padding: 10.3px;
+}
+

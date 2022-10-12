@@ -1,0 +1,15 @@
+.album {
+  background-image: url(/static/img/union@2x.svg);
+  background-size: 100% 100%;
+  border: 1px none;
+  height: 22px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 22px;
+}
+
+.album.album-1 {
+  background-image: url(/static/img/union-1@2x.svg);
+}
+

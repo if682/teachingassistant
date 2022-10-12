@@ -1,0 +1,350 @@
+.desktop-13 {
+  align-items: flex-start;
+  background-color: var(--cod-gray);
+  border: 1px none;
+  display: flex;
+  gap: 1410px;
+  height: 1024px;
+  overflow: hidden;
+  width: 1440px;
+}
+
+.flex-col-43 {
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+  margin-top: 22px;
+  min-height: 1003px;
+  position: relative;
+  width: 1440px;
+}
+
+.overlap-group5-2 {
+  align-self: center;
+  height: 63px;
+  margin-left: 6.0px;
+  position: relative;
+  width: 1394px;
+}
+
+.rectangle-292-1 {
+  border: 1px none;
+  cursor: pointer;
+  height: 46px;
+  left: 1337px;
+  position: absolute;
+  top: 5px;
+  width: 47px;
+}
+
+.rectangle-585-2 {
+  border: 1px none;
+  height: 49px;
+  left: 1126px;
+  position: absolute;
+  top: 2px;
+  width: 46px;
+}
+
+.rectangle-586-2 {
+  border: 1px none;
+  cursor: pointer;
+  height: 49px;
+  left: 1126px;
+  position: absolute;
+  top: 2px;
+  width: 46px;
+}
+
+.flex-row-20 {
+  align-items: flex-start;
+  display: flex;
+  gap: 62px;
+  height: 779px;
+  margin-top: 44px;
+  min-width: 1373px;
+}
+
+.flex-col-44 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  margin-top: 1px;
+  min-height: 754px;
+  width: 350px;
+}
+
+.overlap-group-8 {
+  height: 379px;
+  position: relative;
+  width: 350px;
+}
+
+.spotify-playlist-01-to-the-moon {
+  height: 377px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 350px;
+}
+
+.rectangle-591 {
+  border: 1px none;
+  cursor: pointer;
+  height: 61px;
+  left: 12px;
+  position: absolute;
+  top: 318px;
+  width: 134px;
+}
+
+.to-the-moon-2 {
+  height: 29px;
+  letter-spacing: 0;
+  margin-top: 20px;
+  width: 290px;
+}
+
+.overlap-group4-2 {
+  height: 29px;
+  margin-top: 14px;
+  position: relative;
+  width: 350px;
+}
+
+.cleidson-costa-2 {
+  height: 29px;
+  left: 0;
+  letter-spacing: 0;
+  position: absolute;
+  top: 0;
+  width: 290px;
+}
+
+.x3h-6min-2 {
+  height: 23px;
+  left: 278px;
+  letter-spacing: 0;
+  opacity: 0.5;
+  position: absolute;
+  top: 3px;
+}
+
+.flex-row-21 {
+  align-items: center;
+  align-self: center;
+  display: flex;
+  height: 56px;
+  margin-right: 6.4px;
+  margin-top: 227px;
+  min-width: 302px;
+  position: relative;
+}
+
+.icon-heart-23 {
+  height: 31px;
+  margin-left: 47px;
+  margin-top: 3.92px;
+  width: 33px;
+}
+
+.vector-36 {
+  height: 36px;
+  margin-left: 51px;
+  margin-top: 6.28px;
+  width: 36px;
+}
+
+.iconsappsapp-storemore-11 {
+  align-self: flex-end;
+  cursor: pointer;
+  height: 46px;
+  margin-bottom: 2.28px;
+  margin-left: 34px;
+  width: 46px;
+}
+
+.flex-col-45 {
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+  min-height: 779px;
+  width: 961px;
+}
+
+.image-15-2 {
+  height: 34px;
+  margin-right: 26px;
+  object-fit: cover;
+  width: 189px;
+}
+
+.overlap-group-container {
+  height: 702px;
+  position: relative;
+  width: 961px;
+}
+
+.image-container {
+  height: 702px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 949px;
+}
+
+.image-7-2 {
+  height: 392px;
+  left: 8px;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 866px;
+}
+
+.image-8-2 {
+  height: 312px;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 390px;
+  width: 876px;
+}
+
+.image-17-1 {
+  height: 319px;
+  left: 875px;
+  object-fit: cover;
+  position: absolute;
+  top: 382px;
+  width: 74px;
+}
+
+.image-39 {
+  height: 24px;
+  left: 901px;
+  object-fit: cover;
+  position: absolute;
+  top: 404px;
+  width: 24px;
+}
+
+.image-40 {
+  height: 24px;
+  left: 901px;
+  object-fit: cover;
+  position: absolute;
+  top: 454px;
+  width: 24px;
+}
+
+.image-41 {
+  height: 24px;
+  left: 901px;
+  object-fit: cover;
+  position: absolute;
+  top: 507px;
+  width: 24px;
+}
+
+.image-42 {
+  height: 24px;
+  left: 901px;
+  object-fit: cover;
+  position: absolute;
+  top: 558px;
+  width: 24px;
+}
+
+.image-43 {
+  height: 24px;
+  left: 901px;
+  object-fit: cover;
+  position: absolute;
+  top: 609px;
+  width: 24px;
+}
+
+.image-44 {
+  height: 24px;
+  left: 901px;
+  object-fit: cover;
+  position: absolute;
+  top: 660px;
+  width: 24px;
+}
+
+.image-container-1 {
+  align-items: flex-start;
+  background-position: 50% 50%;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  left: 874px;
+  min-height: 381px;
+  padding: 14px 27px;
+  position: absolute;
+  top: 1px;
+  width: 87px;
+}
+
+.image-32 {
+  height: 24px;
+  margin-top: 19px;
+  object-fit: cover;
+  width: 24px;
+}
+
+.image-3 {
+  height: 24px;
+  margin-top: 27px;
+  object-fit: cover;
+  width: 24px;
+}
+
+.image-3-1 {
+  height: 24px;
+  margin-top: 29px;
+  object-fit: cover;
+  width: 24px;
+}
+
+.group-233 {
+  align-items: flex-start;
+  cursor: pointer;
+  display: flex;
+  margin-right: 32px;
+  margin-top: 12px;
+  min-width: 149px;
+}
+
+.overlap-group1-4 {
+  align-items: flex-start;
+  background: linear-gradient(180deg, rgb(207, 20, 110) 0%, rgba(207, 20, 110, 0) 100%);
+  border-radius: 56px;
+  display: flex;
+  height: 31px;
+  min-width: 147px;
+  padding: 1px 26px;
+}
+
+.remover-todas {
+  color: var(--white);
+  font-family: var(--font-family-roboto);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 28px;
+  min-height: 28px;
+  white-space: nowrap;
+}
+
+.ellipse-2-4 {
+  background: radial-gradient(50% 50% at 50% 50%, rgba(207.19, 19.86, 109.77, 0.61) 0%, rgba(0, 0, 0, 0) 100%);
+  border: 1px none;
+  border-radius: 291.5px;
+  height: 583px;
+  margin-top: -291px;
+  width: 583px;
+}
+

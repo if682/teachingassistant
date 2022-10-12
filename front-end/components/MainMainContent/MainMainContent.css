@@ -1,0 +1,69 @@
+.main-main-content {
+  align-items: flex-start;
+  background-color: #1d3164;
+  border: 1px none;
+  border-radius: 4px;
+  display: flex;
+  height: 116px;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 120px;
+}
+
+.podcasts-1 {
+  letter-spacing: 0;
+  line-height: 24px;
+  margin-left: 16px;
+  margin-top: 11px;
+  min-height: 24px;
+  min-width: 51px;
+  white-space: nowrap;
+}
+
+.rectangle-239 {
+  align-self: flex-end;
+  height: 66px;
+  object-fit: cover;
+  width: 53px;
+}
+
+.main-main-content.main-main-content-1 {
+  background-color: #e13300;
+  gap: 8px;
+}
+
+.main-main-content.main-main-content-1 .podcasts-1 {
+  min-width: 43px;
+}
+
+.main-main-content.main-main-content-2 {
+  background-color: #477d95;
+  gap: 6px;
+  left: 1px;
+  width: 118px;
+}
+
+.main-main-content.main-main-content-2 .podcasts-1 {
+  min-width: 45px;
+}
+
+.main-main-content.main-main-content-2 .rectangle-239 {
+  width: 51px;
+}
+
+.main-main-content.main-main-content-3 {
+  background-color: #b2b2b2;
+  gap: 2px;
+  width: 117px;
+}
+
+.main-main-content.main-main-content-3 .podcasts-1 {
+  min-width: 49px;
+}
+
+.main-main-content.main-main-content-3 .rectangle-239 {
+  width: 50px;
+}
+
