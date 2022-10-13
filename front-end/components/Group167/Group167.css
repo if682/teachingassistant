@@ -1,0 +1,21 @@
+.group-167 {
+  align-items: flex-start;
+  background: conic-gradient(from 180deg at 50% 50%, rgb(207, 20, 110) 0deg, rgba(207, 20, 110, 0) 360deg);
+  border-radius: 20px;
+  display: flex;
+  height: 40px;
+  justify-content: flex-end;
+  left: 0;
+  min-width: 40px;
+  padding: 6.2px 6.2px;
+  position: absolute;
+  top: 0;
+}
+
+.group-166-1 {
+  background-image: url(/static/img/icons-apps-instagram-add-5@2x.svg);
+  background-size: 100% 100%;
+  height: 27px;
+  width: 27px;
+}
+

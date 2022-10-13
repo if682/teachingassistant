@@ -1,0 +1,39 @@
+.component-35 {
+  align-items: center;
+  background-color: var(--malachite);
+  border: 1px none;
+  border-radius: 28px;
+  display: flex;
+  height: 56px;
+  justify-content: flex-end;
+  margin-top: 1.0px;
+  min-width: 56px;
+  padding: 0 15.5px;
+}
+
+.icon-play {
+  height: 21px;
+  width: 19px;
+}
+
+.component-35.component-35-1,
+.component-35.component-35-3,
+.component-35.component-35-4,
+.component-35.component-35-7 {
+  background-color: var(--razzmatazz);
+  margin-top: unset;
+}
+
+.component-35.component-35-2,
+.component-35.component-35-6,
+.component-35.component-35-8 {
+  left: 88px;
+  margin-top: unset;
+  position: absolute;
+  top: 828px;
+}
+
+.component-35.component-35-5 {
+  background-color: #858585;
+}
+

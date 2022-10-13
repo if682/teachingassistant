@@ -1,0 +1,304 @@
+.desktop-3 {
+  align-items: flex-start;
+  background-color: var(--cod-gray);
+  border: 1px none;
+  display: flex;
+  gap: 1410px;
+  height: 1024px;
+  overflow: hidden;
+  width: 1440px;
+}
+
+.flex-col-46 {
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+  margin-top: 22px;
+  min-height: 1003px;
+  position: relative;
+  width: 1440px;
+}
+
+.overlap-group4-5 {
+  align-self: center;
+  height: 63px;
+  margin-left: 6.0px;
+  position: relative;
+  width: 1394px;
+}
+
+.rectangle-292-3 {
+  border: 1px none;
+  cursor: pointer;
+  height: 46px;
+  left: 1337px;
+  position: absolute;
+  top: 5px;
+  width: 47px;
+}
+
+.rectangle-585-4 {
+  border: 1px none;
+  height: 49px;
+  left: 1126px;
+  position: absolute;
+  top: 2px;
+  width: 46px;
+}
+
+.rectangle-586-3 {
+  border: 1px none;
+  cursor: pointer;
+  height: 49px;
+  left: 1126px;
+  position: absolute;
+  top: 2px;
+  width: 46px;
+}
+
+.flex-row-22 {
+  align-items: flex-start;
+  display: flex;
+  gap: 62px;
+  height: 779px;
+  margin-top: 44px;
+  min-width: 1373px;
+}
+
+.flex-col-47 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  margin-top: 1px;
+  min-height: 754px;
+  width: 350px;
+}
+
+.group-164-1 {
+  background-size: 100% 100%;
+  box-shadow: 0px 4px 4px #00000040;
+  height: 377px;
+  width: 350px;
+}
+
+.to-the-moon-3 {
+  height: 29px;
+  letter-spacing: 0;
+  margin-top: 22px;
+  width: 290px;
+}
+
+.overlap-group3-3 {
+  height: 29px;
+  margin-top: 14px;
+  position: relative;
+  width: 350px;
+}
+
+.cleidson-costa-3 {
+  height: 29px;
+  left: 0;
+  letter-spacing: 0;
+  position: absolute;
+  top: 0;
+  width: 290px;
+}
+
+.x3h-6min-3 {
+  height: 23px;
+  left: 278px;
+  letter-spacing: 0;
+  opacity: 0.5;
+  position: absolute;
+  top: 3px;
+}
+
+.flex-row-23 {
+  align-items: center;
+  align-self: center;
+  display: flex;
+  height: 56px;
+  margin-right: 6.4px;
+  margin-top: 227px;
+  min-width: 302px;
+  position: relative;
+}
+
+.icon-heart-24 {
+  height: 31px;
+  margin-left: 47px;
+  margin-top: 3.92px;
+  width: 33px;
+}
+
+.vector-39 {
+  height: 36px;
+  margin-left: 51px;
+  margin-top: 6.28px;
+  width: 36px;
+}
+
+.iconsappsapp-storemore-16 {
+  align-self: flex-end;
+  cursor: pointer;
+  height: 46px;
+  margin-bottom: 2.28px;
+  margin-left: 34px;
+  width: 46px;
+}
+
+.flex-col-48 {
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+  min-height: 779px;
+  width: 961px;
+}
+
+.image-15-3 {
+  height: 34px;
+  margin-right: 26px;
+  object-fit: cover;
+  width: 189px;
+}
+
+.overlap-group2-4 {
+  height: 702px;
+  position: relative;
+  width: 961px;
+}
+
+.image-7-3 {
+  height: 392px;
+  left: 8px;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 866px;
+}
+
+.image-8-3 {
+  height: 312px;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 390px;
+  width: 876px;
+}
+
+.image-16-1 {
+  height: 381px;
+  left: 874px;
+  object-fit: cover;
+  position: absolute;
+  top: 1px;
+  width: 87px;
+}
+
+.image-17-2 {
+  height: 319px;
+  left: 875px;
+  object-fit: cover;
+  position: absolute;
+  top: 382px;
+  width: 74px;
+}
+
+.group-237-1 {
+  align-items: flex-start;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  left: 893px;
+  min-height: 657px;
+  position: absolute;
+  top: 31px;
+  width: 31px;
+}
+
+.iconsappsapp-storemore-12 {
+  height: 31px;
+  width: 31px;
+}
+
+.iconsappsapp-storemore-13 {
+  height: 31px;
+  margin-top: 22px;
+  width: 31px;
+}
+
+.iconsappsapp-storemore-14 {
+  height: 31px;
+  margin-top: 20px;
+  width: 31px;
+}
+
+.overlap-group1-7 {
+  align-items: flex-start;
+  background-image: url(/static/img/icons-apps-app-store-more-19@2x.svg);
+  background-size: 100% 100%;
+  display: flex;
+  margin-top: 20px;
+  min-width: 31px;
+}
+
+.iconsappsapp-storemore-17 {
+  height: 31px;
+  margin-top: 27px;
+  width: 31px;
+}
+
+.iconsappsapp-storemore-15 {
+  height: 31px;
+  margin-top: 21px;
+  width: 31px;
+}
+
+.overlap-group-12 {
+  align-self: center;
+  border-radius: 56px;
+  height: 35px;
+  margin-right: 23.0px;
+  margin-top: 8px;
+  position: relative;
+  width: 166px;
+}
+
+.iconsappsinstagramadd-1 {
+  height: 23px;
+  left: 30px;
+  position: absolute;
+  top: 6px;
+  width: 30px;
+}
+
+.rectangle-268-1 {
+  background: linear-gradient(180deg, rgb(207, 20, 110) 0%, rgba(207, 20, 110, 0) 100%);
+  border: 1px none;
+  border-radius: 56px;
+  height: 35px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 166px;
+}
+
+.bem-vindo-4 {
+  height: 18px;
+  left: 60px;
+  letter-spacing: -0.05px;
+  position: absolute;
+  text-align: center;
+  top: 8px;
+  width: 72px;
+}
+
+.ellipse-2-7 {
+  background: radial-gradient(50% 50% at 50% 50%, rgba(207.19, 19.86, 109.77, 0.61) 0%, rgba(0, 0, 0, 0) 100%);
+  border: 1px none;
+  border-radius: 291.5px;
+  height: 583px;
+  margin-top: -291px;
+  width: 583px;
+}
+
