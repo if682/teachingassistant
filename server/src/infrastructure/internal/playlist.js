@@ -87,7 +87,8 @@ function deletePlaylist(id) {
     let table = readDB('playlists')
     let older_playlist = table.find((el) =>  el.id === id )
     let i = table.indexOf(older_playlist)
-    delete table[i]
+    //delete table[i]
+    let deleted_element = table.splice(i,1);
 
     table  = table ? table : [""]
 
