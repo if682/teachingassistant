@@ -1,0 +1,12 @@
+
+.navbar {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    list-style-type: none;
+}
+
+.navbar > li {
+    margin: 10px
+}
+  

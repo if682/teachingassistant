@@ -1,0 +1,78 @@
+.container {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+.user-page {
+  align-items: flex-end;
+  background-color: var(--cod-gray);
+  border: 1px none;
+  display: flex;
+  flex-direction: column;
+  height: 1024px;
+  overflow: hidden;
+  width: 100vw;
+}
+
+.outer-container {
+  align-items: flex-start;
+  display: flex;
+  height: 100%;
+  width: 100vw;
+}
+
+
+.inner-container {
+  align-items: flex-end;
+  align-self: flex-end;
+  display: flex;
+  flex-direction: column;
+  min-height: 60%;
+  width: 100vw;
+  gap: 8vh;
+}
+  
+.container-list {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(212, 190, 190);
+}
+
+.btn{
+  align-items: left;
+  justify-content: left;
+}
+
+.overlap-container {
+  height: 50%;
+  position: static;
+  width: 100vw;
+}
+
+.carousel-container {
+  align-items: center;
+  display: flex;
+  height: 40%;
+}
+
+.playlists {
+  display: flex;
+  align-self: flex-start;
+  color: var(--solitude);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 700;
+  opacity: 1 !important;
+}
+
+.playlist-name-container {
+  display: flex;
+  margin-left: 1vw;
+  padding: 2vh;
+  opacity: 0.8 ;
+}
