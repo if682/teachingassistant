@@ -124,6 +124,12 @@ function downloadPlaylist(id) {
     return urls
 }
 
+function listPlaylists() {
+    let table = readDB('playlists')
+    const playlists = table.sort((a,b) => b.relevance - a.relevance)
+    return playlists ? playlists : []
+}
+
 export {
     createPlaylist,
     getPlaylist,
@@ -131,5 +137,6 @@ export {
     deletePlaylist,
     listPlaylistsByName,
     listPlaylistsByRelevance,
-    downloadPlaylist
+    downloadPlaylist,
+    listPlaylists
 }

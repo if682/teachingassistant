@@ -1,6 +1,6 @@
-import { CreatePlaylistUseCase, DeletePlaylistUseCase, DownloadPlaylistUseCase, GetPlaylistUseCase, ListPlaylistsByNameUseCase, ListPlaylistsByRelevanceUseCase, UpdatePlaylistUseCase } from '../../../../domain/playlist.js'
+import { CreatePlaylistUseCase, DeletePlaylistUseCase, DownloadPlaylistUseCase, GetPlaylistUseCase, ListPlaylistsByNameUseCase, ListPlaylistsByRelevanceUseCase, ListPlaylistsUseCase, UpdatePlaylistUseCase } from '../../../../domain/playlist.js'
 import { CreatePlaylistUseCaseRequest, DeletePlaylistUseCaseRequest, DownloadPlaylistUseCaseRequest, GetPlaylistUseCaseRequest, ListPlaylistsByNameUseCaseRequest, ListPlaylistsByRelevanceUseCaseRequest, UpdatePlaylistUseCaseRequest } from '../../../../domain/ucio/playlist.js'
-import { CreatePlaylistUseCaseRepository, DeletePlaylistUseCaseRepository, DownloadPlaylistUseCaseRepository, GetPlaylistUseCaseRepository, ListPlaylistsByNameUseCaseRepository, ListPlaylistsByRelevanceUseCaseRepository, UpdatePlaylistUseCaseRepository } from '../../../../infrastructure/provider/repository/playlist.js'
+import { CreatePlaylistUseCaseRepository, DeletePlaylistUseCaseRepository, DownloadPlaylistUseCaseRepository, GetPlaylistUseCaseRepository, ListPlaylistsByNameUseCaseRepository, ListPlaylistsByRelevanceUseCaseRepository, ListPlaylistsUseCaseRepository, UpdatePlaylistUseCaseRepository } from '../../../../infrastructure/provider/repository/playlist.js'
 import { CreatePlaylistUseCaseValidate, DeletePlaylistUseCaseValidate, DownloadPlaylistUseCaseValidate, GetPlaylistUseCaseValidate, ListPlaylistsByNameUseCaseValidate, ListPlaylistsByRelevanceUseCaseValidate, UpdatePlaylistUseCaseValidate } from '../../../../infrastructure/provider/validate/playlist.js'
 import { SuccessResponse , InternalServerErrorResponse } from '../response/response.js'
 class CreatePlaylistController {
@@ -149,6 +149,22 @@ class DownloadPlaylistController {
     }
 }
 
+class ListPlaylistsController {
+    listPlaylists(req,res) {
+        const repository = new ListPlaylistsUseCaseRepository()
+
+        const usecase = new ListPlaylistsUseCase(repository)
+
+        const ucRes = usecase.listPlaylists()
+
+        if (ucRes.error) {
+            return new InternalServerErrorResponse().internalServerError(res, ucRes.error)
+        } else {
+            return new SuccessResponse().success(res, ucRes.playlists)
+        }
+    }
+}
+
 export {
     CreatePlaylistController,
     GetPlaylistController,
@@ -156,5 +172,6 @@ export {
     DeletePlaylistController,
     ListPlaylistsByNameController,
     ListPlaylistsByRelevanceController,
-    DownloadPlaylistController
+    DownloadPlaylistController,
+    ListPlaylistsController
 }
