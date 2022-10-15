@@ -1,0 +1,95 @@
+.playlistMusics-main {
+  width: 100%;
+  height: 600px;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+
+  font-family: "Inter";
+}
+
+.playlistMusics-noMusicDiv p {
+  padding: 18px 30px 20px;
+  background: linear-gradient(180deg, #cf146e 0%, rgba(207, 20, 110, 0) 100%);
+  border-radius: 56px;
+
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 41px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: -0.004em;
+
+  color: #ffffff;
+}
+
+.playlistMusics-hasMusicDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+
+    gap: 20px;
+}
+
+.playlistMusics-music {
+    display: flex;
+    align-items: center;
+
+    width: 100%;    
+    gap: 10px;
+}
+
+.playlistMusics-music-index {
+    font-size: 16px;
+    font-weight: 400;
+    color: #b3b3b3;
+}
+
+.playlistMusics-music-infos {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    
+    max-width: 300px;
+    width: 100%;
+}
+
+.playlistMusics-music-infos img {
+    width: 40px;
+    height: 40px;
+}
+
+.playlistMusics-music-infos-names {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    gap: 5px;
+}
+
+.playlistMusics-music-musicName {
+    font-size: 16px;
+    font-weight: 400;
+    color: white;
+}
+
+.playlistMusics-music-text {
+    font-size: 14px;
+    font-weight: 400;
+    color: #b3b3b3;
+}
+
+.playlistMusics-music-album, .playlistMusics-music-release {
+    max-width: 300px;
+    width: 100%;
+}
+
+.playlistMusics-music-duration {
+    margin-right: 40px;
+}

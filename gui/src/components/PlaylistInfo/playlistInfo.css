@@ -1,0 +1,9 @@
+.playlistInfo-main {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 70px;
+
+    gap: 60px;
+}
