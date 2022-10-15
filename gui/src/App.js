@@ -1,6 +1,5 @@
 import { Route, BrowserRouter, Routes} from 'react-router-dom';
 import './App.css';
-import Carousel, { CarouselItem } from './components/carousel/Carousel';
 import PlaylistHeader from './components/playlistHeader/playlistHeader';
 import Playlist from './components/PlaylistPage/PlaylistPage';
 import ShowList from './components/ShowList/ShowList.jsx';

@@ -1,0 +1,83 @@
+.playlistContent-main {
+  width: 350px;
+  min-height: 600px;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  font-family: "Inter";
+
+  position: relative;
+}
+
+.playlistContent-image {
+  width: 350px;
+  height: 380px;
+
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  margin-bottom: 21px;
+}
+
+.playlistContent-image img {
+  width: 41px;
+  height: 41px;
+}
+
+.playlistContent-image p {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+
+  font-weight: 700;
+  font-size: 38px;
+  color: #eaf0ff;
+  display: flex;
+  align-items: center;
+}
+
+.playlistContent-name {
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 46px;
+  color: #eaf0ff;
+
+  text-align: left;
+
+  margin-bottom: 14px;
+}
+
+.playlistContent-infos {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+}
+
+.playlistContent-infos p {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  display: flex;
+  align-items: center;
+
+  color: #eaf0ff;
+}
+
+.playlistContent-infos-duration {
+  opacity: 0.5;
+}
+
+.playlistContent-buttons {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  position: absolute;
+  bottom: 0;
+}
