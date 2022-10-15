@@ -4,7 +4,8 @@
   "description": "Projeto da cadeira de Engenharia de Software(EC)",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test-init": "./node_modules/jasmine/bin/jasmine.js init",
+    "test": "./node_modules/jasmine/bin/jasmine.js",
     "dev": "node src/main"
   },
   "repository": {
@@ -23,5 +24,10 @@
     "express": "^4.18.1",
     "fs": "^0.0.1-security"
   },
-  "type": "module"
+  "type": "module",
+  "devDependencies": {
+    "@types/node": "^18.8.5",
+    "jasmine": "^4.4.0",
+    "typescript": "^4.8.4"
+  }
 }
