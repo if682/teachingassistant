@@ -103,6 +103,8 @@ function PlaylistPage () {
     }
   ];
 
+  const voidMusicArray = []
+
   return (
     <div className="container">
       <div className="container-list">
