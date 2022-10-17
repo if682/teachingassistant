@@ -1,0 +1,79 @@
+.removeModal-playlist-main,
+.removeModal-music-main {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  z-index: 10;
+
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: rgba(0, 0, 0, 0.819);
+  font-family: "Inter";
+}
+
+.removeModal-playlist-modal,
+.removeModal-music-modal {
+  width: 60%;
+  height: 50%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  gap: 40px;
+
+  background: linear-gradient(
+    152.97deg,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  backdrop-filter: blur(21px);
+  border-radius: 16px;
+}
+
+.removeModal-playlist-modal-text,
+.removeModal-music-modal-text {
+  max-width: 639px;
+  width: 100%;
+
+  text-align: center;
+
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 58px;
+  letter-spacing: -0.004em;
+
+  color: #ffffff;
+}
+
+.removeModal-music-modal-text {
+    max-width: 700px;
+}
+
+.removeModal-playlist-modal-button,
+.removeModal-music-modal-button {
+  max-width: 245px;
+  width: 100%;
+  padding: 10px 10px;
+
+  text-align: center;
+
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 41px;
+  letter-spacing: -0.004em;
+
+  color: #ffffff;
+
+  background: linear-gradient(180deg, #cf146e 0%, rgba(207, 20, 110, 0) 100%);
+  border-radius: 56px;
+
+  cursor: pointer;
+}

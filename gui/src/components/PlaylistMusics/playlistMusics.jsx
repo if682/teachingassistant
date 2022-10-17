@@ -14,12 +14,45 @@ function PlaylistMusics(props) {
       if(optionsFlag){
           document.querySelector(`.musicPopup${index}`).style.display = "none"
           document.querySelector(".darkOverlay").style.display = "none"
+
+          document.querySelector(`.musicPopup${index}`).style.zIndex = "initial"
+          document.querySelector(`.playlistMusics-music-options${index}`).style.zIndex = "initial"
+          document.querySelector(".darkOverlay").style.zIndex = "initial"
+
           optionsFlag = 0
       }else{
           document.querySelector(`.musicPopup${index}`).style.display = "flex"
           document.querySelector(".darkOverlay").style.display = "block"
+
+          document.querySelector(`.musicPopup${index}`).style.zIndex = "3"
+          document.querySelector(`.playlistMusics-music-options${index}`).style.zIndex = "3"
+          document.querySelector(".darkOverlay").style.zIndex = "2"
+
           optionsFlag = 1
       }
+  }
+
+  function cancelRemoveMusics(){
+    document.querySelectorAll(".playlistMusics-music").forEach((music) => {
+        music.lastElementChild.style.display = "flex"
+        music.lastElementChild.previousSibling.style.display = "none"
+    })
+
+    document.querySelectorAll(".playlistMusics-music-removeCheckbox").forEach((checkboxDiv) => {
+      checkboxDiv.firstElementChild.checked = false
+    })
+    
+    document.querySelector(".playlistMusics-removeAllMusicsButton").style.display = "none"
+  }
+
+  function selectAllMusics(){
+    document.querySelectorAll(".playlistMusics-music-removeCheckbox").forEach((checkboxDiv) => {
+      checkboxDiv.firstElementChild.checked = true
+    })
+  }
+
+  function showRemoveMusicModal(){
+      document.querySelector(".removeMusicModalDiv").style.display = "block"
   }
 
   if (props.playlistMusics.length === 0) {
@@ -48,19 +81,26 @@ function PlaylistMusics(props) {
                 <p className="playlistMusics-music-text playlistMusics-music-album">{music.album}</p>
                 <p className="playlistMusics-music-text playlistMusics-music-release">{music.releaseDate}</p>
                 <p className="playlistMusics-music-text playlistMusics-music-duration">{music.duration}</p>
-                <div className="playlistMusics-music-options">
+                <div className="playlistMusics-music-removeCheckbox">
+                    <input type="checkbox" id={`removeCheckbox${index}`}/>
+                </div>
+                <div className={`playlistMusics-music-options playlistMusics-music-options${index}`}>
                   <img src={optionsButton} alt="" onClick={() => showOptions(index)}/>
                   <div className={`playlistMusics-music-optionsPopup musicPopup${index}`}>
                       <p><img src={likeButton} alt=""/>Curtir</p>
                       <p><img src={downloadButton} alt=""/>Baixar</p>
-                      <p><img src={removeButton} alt=""/>Remover</p>
+                      <p onClick={showRemoveMusicModal}><img src={removeButton} alt=""/>Remover</p>
                   </div>
                 </div>
               </div>
             );
           })}
+          <div className="playlistMusics-removeAllMusicsButton">
+            <p onClick={selectAllMusics}>Selecionar todas</p>
+            <p onClick={showRemoveMusicModal}>Remover</p>
+            <p onClick={cancelRemoveMusics}>Cancelar</p>
+          </div>
         </div>
-      <div className="darkOverlay"></div>
       </div>
     );
   }
