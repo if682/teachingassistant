@@ -34,6 +34,64 @@ function listMusics() {
     return table ? table : []
 }
 
+function uploadMusic(image, name, owner, album, releaseDate, duration, accountID, url) {
+    
+    let table = readDB('musics')
+    
+
+    const music = {  
+        id : nextInt(table),
+        name: name,
+        image: image,
+        accountID: accountID,
+        owner:owner,
+        releaseDate: releaseDate,
+        album: album,
+        duration:duration,
+        url: url
+    }
+    if (table.length === 1 && table[0]===null) {
+        writeDB('musics', [music])
+    } else {
+        table.push(music)
+        writeDB('musics', table)
+    }
+
+    return music
+
+}
+
+function deleteMusic(id) {
+    let table = readDB('musics')
+    let older_music = table.find((el) =>  el.id === id )
+    let i = table.indexOf(older_music)
+    //delete table[i]
+    let deleted_element = table.splice(i,1);
+
+    table  = table ? table : [""]
+
+    writeDB('musics', table)
+
+    return
+}
+
+function getMusic(id) {
+    let table = readDB('musics')
+
+    for (let i=0; i<table.length; i = i+1) {
+        if (id === table[i].id) {
+            return table[i]
+        }
+    }
+
+    return null
+
+}
+
+
 export {
-    listMusics
+    listMusics,
+    uploadMusic,
+    deleteMusic,
+    getMusic
 }

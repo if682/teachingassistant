@@ -75,4 +75,6 @@
     font-style: normal;
     font-weight: 700;
     opacity: 1 !important;
+    flex-wrap: wrap;
+    overflow: hidden;
 }

@@ -15,8 +15,13 @@ import removePlaylistButton from "./assets/removePlaylist.svg"
 import shareButton from "./assets/share.svg"
 
 import defaultImage from "./assets/defaultPlaylistImage.svg"
+import { useState } from "react";
 
-function PlaylistContent (props) {   
+function PlaylistContent (props) {
+    
+    const {playlistName, followersNumber, playlistOwner, playlistDuration, playlistMusics, playlistID, playlistImage, playlistCategory, selectedPlaylist } = props
+    
+
     let optionsFlag = 0
 
     function closeOptions(){
@@ -68,25 +73,25 @@ function PlaylistContent (props) {
     function showEditPlaylistModal(){
         document.querySelector(".editPlaylistModalDiv").style.display = "block"
     }
-    
+    console.log('CONTENT:', props)
     return (
         <div className="playlistContent-main">
             <div className="removePlaylistModalDiv">
-                <RemoveModal modalFlag="removePlaylist"/>
+                <RemoveModal ID={playlistID} selectedPlaylist={selectedPlaylist} playlistName={playlistName} playlistImage={playlistImage} playlistCategory={playlistCategory} modalFlag="removePlaylist"/>
             </div>
             <div className="removeMusicModalDiv">
-                <RemoveModal modalFlag="removeMusic"/>
+                <RemoveModal ID={playlistID} selectedPlaylist={selectedPlaylist} playlistName={playlistName} playlistImage={playlistImage} playlistCategory={playlistCategory}  modalFlag="removeMusic"/>
             </div>
             <div className="editPlaylistModalDiv">
-                <EditPlaylistModal/>
+                <EditPlaylistModal playlistName={playlistName} followersNumber={followersNumber} playlistOwner={playlistOwner} playlistMusics={playlistMusics} playlistID={playlistID} playlistImage={playlistImage} playlistCategory={playlistCategory}/>
             </div>
-            <div className="playlistContent-image" style={ props.playlistImage ? {backgroundImage: `url(${props.playlistImage})`} : {backgroundImage: `url(${defaultImage})`}}>
-                <p><img src={heart} alt="Followers heart"/>{props.followersNumber}</p>
+            <div className="playlistContent-image" style={ playlistImage ? {backgroundImage: `url(${playlistImage})`,backgroundPosition:'center'} : {backgroundImage: `url(${defaultImage})`}}>
+                <p><img src={heart} alt="Followers heart"/>{followersNumber}</p>
             </div>
-            <p className="playlistContent-name">{props.playlistName}</p>
+            <p className="playlistContent-name">{playlistName}</p>
             <div className="playlistContent-infos">
-                <p>{props.playlistOwner}</p>
-                <p className="playlistContent-infos-duration">{props.playlistDuration}</p>
+                <p>{playlistOwner}</p>
+                <p className="playlistContent-infos-duration">{playlistDuration}</p>
             </div>
             <div className="playlistContent-buttons">
                 <div className="darkOverlay"></div>

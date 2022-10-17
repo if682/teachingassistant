@@ -121,3 +121,20 @@
   display: block;
   cursor: pointer;
 }
+
+.editPlaylistModal-alert {
+  padding: 20px;
+  background-color: #f02020; /* Red */
+  color: white;
+  margin-bottom: 15px;
+  border-color: #ec1b0c;  
+}
+
+.editPlaylistModal-alert-text {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: -0.004em;
+
+  color: #ffffff;
+}

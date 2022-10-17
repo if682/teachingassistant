@@ -1,4 +1,4 @@
-import { listMusics } from "../../internal/music.js";
+import { listMusics, uploadMusic, deleteMusic } from "../../internal/music.js";
 
 class ListMusicsUseCaseRepository {
     listMusics() {
@@ -6,6 +6,20 @@ class ListMusicsUseCaseRepository {
     }
 }
 
+class UploadMusicUseCaseRepository {
+    uploadMusic(image, name, owner, album, releaseDate, duration, accountID, url) {
+        return uploadMusic(image, name, owner, album, releaseDate, duration, accountID, url)
+    }
+}
+
+class DeleteMusicUseCaseRepository {
+    deleteMusic(id) {
+        return deleteMusic(id)
+    }
+}
+
 export {
-    ListMusicsUseCaseRepository
+    ListMusicsUseCaseRepository,
+    UploadMusicUseCaseRepository,
+    DeleteMusicUseCaseRepository
 }

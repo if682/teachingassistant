@@ -1,11 +1,11 @@
-.container {
+.container-playlist-page {
     width: 100%;
     margin: 0 auto;
 
     overflow-x: hidden;
   }
 
-  .container-list {
+  .container-list-playlist-page {
     width: 100%;
     min-height: 100vh;
     display: flex;

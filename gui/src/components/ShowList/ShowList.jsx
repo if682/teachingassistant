@@ -15,17 +15,9 @@ function ShowList(props) {
     const CreatePlaylistModalRef = useRef(null)
     const [playlistID, setPlaylistID] = useState(undefined)
 
-    const navigate = useNavigate()
-
     const toggleDropdown = () => {
         console.log('show modal')
         setCreatePlaylistModal("show")
-    }
-
-    const selectPlaylist = (event) => {
-        console.log(event.target.value)
-        setPlaylistID(event.target.value)
-        navigate('/playlistPage',{state:{ID:parseInt(event.target.value,10)}})
     }
 
     useEffect(()=> {
@@ -35,8 +27,7 @@ function ShowList(props) {
                 url: `/listPlaylistsBy${sort}`,
                 headers: {}, 
                 data: {
-                    accountID: props.accountID,
-                    ID: props.ID
+                    accountID: parseInt(localStorage.getItem('accountID'),10)
                 }
               })
             let val = response.data
@@ -98,7 +89,7 @@ function ShowList(props) {
           </div>
 
           <div>
-            <CreatePlaylist accountID={props.accountID} modalController={CreatePlaylistModal} openModal={setCreatePlaylistModal} modalRef ={CreatePlaylistModalRef} categories = {['teste', 'teste 2', 'teste 3']} />
+            <CreatePlaylist accountID={props.accountID} modalController={CreatePlaylistModal} openModal={setCreatePlaylistModal} modalRef ={CreatePlaylistModalRef} categories = {[undefined,'teste', 'teste 2', 'teste 3']} />
           </div>
 
         </div>
