@@ -3,11 +3,18 @@ import './App.css';
 import PlaylistHeader from './components/playlistHeader/playlistHeader';
 import Playlist from './components/PlaylistPage/PlaylistPage';
 import ShowList from './components/ShowList/ShowList.jsx';
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { fab } from '@fortawesome/free-brands-svg-icons'
+import { fas } from '@fortawesome/free-solid-svg-icons'
+import Carousel, { CarouselItem } from './components/carousel/Carousel';
+
+library.add(fab,fas)
 
 function App() {
+
   return (
 
-    <div className='container'>
+    <div className='container' style={{maxWidth:'1920px'}}>
       <PlaylistHeader/>
       <BrowserRouter>
         <Routes>
