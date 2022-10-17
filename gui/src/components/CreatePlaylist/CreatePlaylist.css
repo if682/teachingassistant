@@ -1,21 +1,20 @@
-.modal-body-custom-text{
-  font-family: 'Roboto';
+.modal-body-custom-text {
+  font-family: "Roboto";
 }
 
-.custom-form-group{
+.custom-form-group {
   padding: 10px;
-  font-family: 'Roboto';
+  font-family: "Roboto";
 }
 
 .alert-create-playlist {
   padding: 20px;
-  background-color: #f02020; /* Red */
+  background-color: #f02020;
   color: white;
   margin-bottom: 15px;
-  border-color: #ec1b0c;  
+  border-color: #ec1b0c;
 }
 
-/* The close button */
 .closebtn-create-playlist {
   margin-left: 15px;
   color: white;
@@ -27,7 +26,173 @@
   transition: 0.3s;
 }
 
-/* When moving the mouse over the close button */
 .closebtn-create-playlist:hover {
   color: black;
+}
+
+.addPlaylistModal-main {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  z-index: 10;
+
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: rgba(0, 0, 0, 0.819);
+  font-family: "Inter";
+}
+
+.auxDiv-preview {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.closeButtonModal {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+
+  cursor: pointer;
+}
+
+.addPlaylistModal-modal {
+  width: 60%;
+  height: fit-content;
+
+  padding: 40px 60px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  gap: 0px;
+
+  background: linear-gradient(
+    152.97deg,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  backdrop-filter: blur(21px);
+  border-radius: 16px;
+}
+
+.addPlaylistModal-text {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 36px;
+  letter-spacing: -0.004em;
+
+  color: #ffffff;
+}
+
+.addPlaylistModal-button {
+  width: 100%;
+
+  margin-top: 20px;
+
+  display: flex;
+  justify-content: flex-end;
+}
+
+.addPlaylistModal-button p {
+  max-width: 205px;
+  width: 100%;
+  padding: 5px 10px;
+
+  text-align: center;
+
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 41px;
+  letter-spacing: -0.004em;
+
+  color: #ffffff;
+
+  background: linear-gradient(180deg, #cf146e 0%, rgba(207, 20, 110, 0) 100%);
+  border-radius: 56px;
+
+  cursor: pointer;
+}
+
+.addPlaylistModal-inputName {
+  width: 100%;
+  padding: 12px;
+  margin: 12px 0 12px;
+  display: inline-block;
+  background-color: black;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: -0.004em;
+
+  color: rgb(207, 20, 110);
+}
+
+.addPlaylistModal-inputImage {
+  margin: 12px 0 12px;
+}
+
+.addPlaylistModal-inputImage input {
+  display: none;
+}
+
+.addPlaylistModal-inputImage label {
+  width: 60%;
+  border-radius: 4px;
+  padding: 15px 20px;
+  background-color: rgb(11, 11, 11);
+  color: rgb(207, 20, 110);
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+  display: block;
+  cursor: pointer;
+}
+
+.addPlaylistModal-inputCategory {
+  width: 100%;
+  padding: 12px;
+  margin: 12px 0 12px;
+  display: inline-block;
+  background-color: black;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: -0.004em;
+
+  color: rgb(207, 20, 110);
+}
+
+.addPlaylistModal-alert {
+  padding: 20px;
+  background-color: #f02020; /* Red */
+  color: white;
+  margin-bottom: 15px;
+  border-color: #ec1b0c;
+}
+
+.addPlaylistModal-alert-text {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: -0.004em;
+
+  color: #ffffff;
 }

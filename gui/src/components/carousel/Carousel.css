@@ -2,7 +2,7 @@
 .control {
     display: flex;
     flex-direction: row;
-    width: 100%;
+    width: 96%;
     align-items: center;
     justify-content: center;
 }

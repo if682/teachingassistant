@@ -7,9 +7,6 @@ import { useState } from "react";
 import { useNavigate } from "react-router";
 
 function RemoveModal(props) {
-
-
-
   const { ID, selectedPlaylist, playlistName, playlistImage, playlistCategory } = props
   const navigate = useNavigate()
 

@@ -9,22 +9,18 @@ import { fab } from '@fortawesome/free-brands-svg-icons'
 import { fas } from '@fortawesome/free-solid-svg-icons'
 import Carousel, { CarouselItem } from './components/carousel/Carousel';
 
-library.add(fab,fas)
+library.add(fab, fas);
 
 function App() {
+  localStorage.setItem("accountID", 1);
 
-  localStorage.setItem('accountID', 1)
-
+  
   return (
-
     <div>
       <Navbar/>
       <BrowserRouter>
         <Routes>
-          <Route
-            element={<ShowList></ShowList>}
-            path="/"
-          ></Route>
+          <Route element={<ShowList></ShowList>} path="/"></Route>
           <Route element={<Playlist></Playlist>} path="/PlaylistPage"></Route>
         </Routes>
       </BrowserRouter>
