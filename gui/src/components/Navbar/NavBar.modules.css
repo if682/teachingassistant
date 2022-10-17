@@ -6,6 +6,16 @@
     height: 65px;
 }
 
+.ajusteProfile{
+    margin-top: 10px;
+    margin-left: 70px;
+}
+
+.ajusteOptions{
+    margin-top: 10px;
+    margin-right: -75px;
+}
+
 .text-user{
     position: relative;
     color: white;
@@ -66,7 +76,7 @@ input{
 }
 
 .lupa{
-    background-image: url("C:\Users\jotap\navbar\my-app\src\img\Search.svg") ;
+    background-image: url("../../img/Search.svg") ;
     background-repeat: no-repeat;
     background-position: left 5px top 15px;
     padding-left: 1.3em;
