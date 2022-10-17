@@ -12,6 +12,8 @@ library.add(fab,fas)
 
 function App() {
 
+  localStorage.setItem('accountID', 1)
+
   return (
 
     <div className='container' style={{maxWidth:'1920px'}}>
@@ -19,7 +21,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route
-            element={<ShowList accountID={1} ID={1}></ShowList>}
+            element={<ShowList></ShowList>}
             path="/"
           ></Route>
           <Route element={<Playlist></Playlist>} path="/PlaylistPage"></Route>

@@ -5,12 +5,28 @@ import { useLocation } from "react-router-dom";
 import PlaylistInfo from "../PlaylistInfo/playlistInfo";
 
 function PlaylistPage () {
-  const [musics, setMusics] = useState(undefined);
+  const [musics, setMusics] = useState([]);
+  const [playlist, setPlaylist] = useState('')
+  const [user, setUser] = useState('')
+  const [playlistTime, setPlaylistTime] = useState('-')
   const location = useLocation();
-  console.log(location);
-  /*const { ID } = location.state;
+  const { ID } = location.state;
 
   useEffect(() => {
+
+    async function fetchUser() {
+      const response = await axiosInstance({
+        method: "post",
+        url: `/getUser`,
+        headers: {},
+        data: {
+          accountID: parseInt(localStorage.getItem('accountID'),10)
+        },
+      });
+      let val = await response.data
+      return val
+    }
+
     async function fetchPlaylistData() {
       const response = await axiosInstance({
         method: "post",
@@ -37,30 +53,46 @@ function PlaylistPage () {
     const run = async () => {
       const musics = await fetchMusics();
 
-      const playlist = await fetchPlaylistData();
+      const playlistData = await fetchPlaylistData();
 
-      if (playlist.musics.length > 0) {
-        const playlistMusics = playlist.musics.map((music) =>
+      const user = await fetchUser()
+
+      setUser(user.name)
+
+      setPlaylist(playlistData)
+      if (playlistData.musics.length > 0) {
+        const playlistMusics = playlistData.musics.map((music) =>
           musics.find((el) => el.id === music)
         );
-        const names = (
-          <ul>
-            {playlistMusics.map((el) => (
-              <li>{el.name}</li>
-            ))}{" "}
-          </ul>
-        );
-        setMusics(names);
+        console.log(playlistMusics)
+        
+        setMusics(playlistMusics)
+
+        let duration = playlistMusics.map(el => {
+          let  aux = el.duration
+          let min = parseInt(aux.substring(0,aux.indexOf(':')))
+          let segs = parseInt(aux.substring(aux.indexOf(':')+1))
+          return min*60 + segs
+        })
+  
+        let val = duration.reduce((accumulator,value) => {
+          return accumulator + value
+        })
+  
+        setPlaylistTime(`${Math.floor(val/60)}:${val%60}`)
       }
     };
 
     run();
 
-    return () => {};
-  }, []);*/
+    return () => {
+      setMusics([])
+      setPlaylist('')
+    };
+  }, [])
 
   // Array auxiliar pra ajudar no desenvolvimento do front
-  const musicArray = [
+  /*const musicArray = [
     {
       //image: "alguma imagem"
       name: "BDSM",
@@ -70,7 +102,7 @@ function PlaylistPage () {
       duration: "1:13"
     },
     {
-      //image: "alguma imagem"
+      image: "alguma imagem"
       name: "BDSM",
       owner: "Jonga Doido",
       album: "Jongalbum",
@@ -101,20 +133,23 @@ function PlaylistPage () {
       releaseDate: "27 de jul. de 1945",
       duration: "1:13"
     }
-  ];
+  ];*/
 
-  const voidMusicArray = []
+  //const voidMusicArray = []
 
   return (
-    <div className="container">
-      <div className="container-list">
+    <div className="container-playlist-page">
+      <div className="container-list-playlist-page">
         <div>
           <PlaylistInfo
-            playlistName="To The Moon"
-            followersNumber="5.7k"
-            playlistOwner="Cleidson Costa"
-            playlistDuration="3h 6min"
-            playlistMusics={musicArray}
+            playlistName={playlist.name}
+            followersNumber={playlist.followers ? playlist.followers.length: 0}
+            playlistOwner={user ? user : ''}
+            playlistDuration={playlistTime}
+            playlistMusics={musics}
+            playlistID={ID}
+            playlistImage={playlist.image}
+            playlistCategory={playlist.category}
           />
         </div>
       </div>

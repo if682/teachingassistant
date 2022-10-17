@@ -3,6 +3,7 @@ import axiosInstance from '../common/server'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import './CreatePlaylist.css'
 import { s3 } from '../../config/aws'
+import { useNavigate } from 'react-router';
 
 
 function CreatePlaylist(props) {
@@ -16,9 +17,18 @@ function CreatePlaylist(props) {
 
     const [playlistImage, setPlaylistImage] = useState('')
     const [preview, setPreview] = useState('')
+    const [errorMessage, setErrorMessage] = useState('')
 
-    const testing = (event) => {
-        console.log(event.target.files)
+    console.log(localStorage.getItem('accountID'))
+
+    const navigate = useNavigate()
+
+    const closeModal = () => {
+      openModal()
+      setPlaylistImage(undefined)
+      setErrorMessage(undefined)
+      setPlaylistName('')
+      setPlaylistCategory(undefined)
     }
 
     const handlePlaylistImage = async function(event) {
@@ -52,6 +62,7 @@ function CreatePlaylist(props) {
 
         
     async function createPlaylist() {
+        try{
         const response = await axiosInstance({
             method: 'post',
             url: '/createPlaylist',
@@ -60,17 +71,29 @@ function CreatePlaylist(props) {
                 name: playlistName,
                 category: playlistCategory,
                 image: playlistImage,
-                accountID: accountID
+                accountID: parseInt(localStorage.getItem('accountID'),10)
             }
           })
 
         setPlaylistName("")
-        setPlaylistCategory(categories.length > 0 ? categories[0]: undefined)
+        setPlaylistCategory(undefined)
         setPlaylistImage(undefined)
 
-        console.log('NOME:',playlistName, 'Categoria:', playlistCategory,'Imagem:', playlistImage)
-
-        return response.data
+        console.log(response.data)
+        navigate('/PlaylistPage', {state:{ID: response.data.id}})
+        closeModal()
+        return
+        } catch(error) {
+          console.log('erro na criação de playlist!')
+          setErrorMessage(
+            <div class="alert-create-playlist">
+              <span class="closebtn-create-playlist" onClick={closeModal}>&times;</span>
+                Erro na criação da playlist!
+              </div>
+          )
+          setTimeout(closeModal, 2000);
+          return
+        }
     }
 
     return (
@@ -79,7 +102,7 @@ function CreatePlaylist(props) {
             <div className="modal-content" style={{backgroundColor: 'var(--eerie-black)', color:'aliceblue'}}>
               <div className="modal-header">
                 <h5 className="modal-title">Criar Playlist</h5>
-                <button type="button" onClick={() => openModal()} className="btn btn-outline-danger" data-dismiss="modal" aria-label="Close">
+                <button type="button" onClick={closeModal} className="btn btn-outline-danger" data-dismiss="modal" aria-label="Close">
                   <span className='close'><FontAwesomeIcon icon={["fas", "fa-times"]}></FontAwesomeIcon></span>
                 </button>
               </div>
@@ -96,14 +119,15 @@ function CreatePlaylist(props) {
                     <div className="form-group custom-form-group">
                         <label htmlFor="playlist-category"> Selecione uma categoria</label>
                         <select id="playlist-category" className='form-control' value={playlistCategory} onChange={(event)=> setPlaylistCategory(event.target.value)} >
-                            {categories.map((el,index) => <option value={el} key={index}>{el}</option>)}
+                            {categories.map((el,index) => <option value={el} key={index}>{el ? el : 'Selecione'}</option>)}
                         </select>    
                     </div>
                 </form>
                 {preview ? preview : ''}
+                {errorMessage ? errorMessage : ''}
               </div>
               <div className="modal-footer">
-                <button type="button" className="btn btn-primary" onClick={testing}>Criar</button>
+                <button type="button" className="btn btn-primary" onClick={createPlaylist}>Criar</button>
               </div>
             </div>
           </div>

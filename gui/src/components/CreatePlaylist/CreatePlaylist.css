@@ -6,3 +6,28 @@
   padding: 10px;
   font-family: 'Roboto';
 }
+
+.alert-create-playlist {
+  padding: 20px;
+  background-color: #f02020; /* Red */
+  color: white;
+  margin-bottom: 15px;
+  border-color: #ec1b0c;  
+}
+
+/* The close button */
+.closebtn-create-playlist {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* When moving the mouse over the close button */
+.closebtn-create-playlist:hover {
+  color: black;
+}

@@ -11,7 +11,7 @@ export const CarouselItem = (props) => {
     console.log(children)
     return (
         <div className='carousel-item-custom' style={{width:width, backgroundImage: `url(${el.image})`}}>
-            <Link to={{pathname:`${itemPath}`}} state={{ID: el.id}} style={{textDecoration: 'none', display:'flex', width:'100%', height:'100%'}}>
+            <Link to={{pathname:`${itemPath}`}} state={{ID: el.id, accountID: el.accountID}} style={{textDecoration: 'none', display:'flex', width:'100%', height:'100%'}}>
               <span className='main-title-playlist'>{el.name}</span>
             </Link>
         </div>
