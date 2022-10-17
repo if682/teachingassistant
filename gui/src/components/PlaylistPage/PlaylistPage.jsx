@@ -91,52 +91,6 @@ function PlaylistPage () {
     };
   }, [])
 
-  // Array auxiliar pra ajudar no desenvolvimento do front
-  /*const musicArray = [
-    {
-      //image: "alguma imagem"
-      name: "BDSM",
-      owner: "Jonga Doido",
-      album: "Jongalbum",
-      releaseDate: "27 de jul. de 1945",
-      duration: "1:13"
-    },
-    {
-      image: "alguma imagem"
-      name: "BDSM",
-      owner: "Jonga Doido",
-      album: "Jongalbum",
-      releaseDate: "27 de jul. de 1945",
-      duration: "1:13"
-    },
-    {
-      //image: "alguma imagem"
-      name: "BDSM",
-      owner: "Jonga Doido",
-      album: "Jongalbum",
-      releaseDate: "27 de jul. de 1945",
-      duration: "1:13"
-    },
-    {
-      //image: "alguma imagem"
-      name: "BDSM",
-      owner: "Jonga Doido",
-      album: "Jongalbum",
-      releaseDate: "27 de jul. de 1945",
-      duration: "1:13"
-    },
-    {
-      //image: "alguma imagem"
-      name: "BDSM",
-      owner: "Jonga Doido",
-      album: "Jongalbum",
-      releaseDate: "27 de jul. de 1945",
-      duration: "1:13"
-    }
-  ];*/
-
-  //const voidMusicArray = []
-
   return (
     <div className="container-playlist-page">
       <div className="container-list-playlist-page">
