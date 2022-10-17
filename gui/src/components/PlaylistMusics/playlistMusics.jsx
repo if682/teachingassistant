@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./playlistMusics.css";
 
 import optionsButton from "./assets/optionsButton.svg"
@@ -6,27 +6,106 @@ import downloadButton from "./assets/downloadButton.svg"
 import likeButton from "./assets/likeButton.svg"
 import removeButton from "./assets/removeButton.svg"
 import defaultMusicImage from "./assets/defaultMusicImage.png"
+import { s3 } from "../../config/aws";
+import axiosInstance from "../common/server";
+import { useEffect } from "react";
 
 function PlaylistMusics(props) {
   let optionsFlag = 0
+  const [musicArray, setMusicArray] = useState(props.playlistMusics)
+  const [selectedMusicArray, setSelectedMusicArray] = useState(new Array(props.playlistMusics.length).fill(1))
+  const [sent, setSent] = useState(false)
+
+  useEffect(()=>{
+    setMusicArray(props.playlistMusics)
+    setSelectedMusicArray(new Array(props.playlistMusics.length).fill(1))
+  },[props.playlistMusics])
+
+  function removefromMusicArray(index) {
+    let val = selectedMusicArray
+    val[index] = 1- val[index]
+    setSelectedMusicArray(val)
+    console.log(val)
+  }
+
+  function removeMusicsPlaylist() {
+      const newMusicArray = musicArray.filter((el,index)=> selectedMusicArray[index] === 1)
+      return newMusicArray
+  }
+
+  async function addMusics() {
+    async function fetchMusics() {
+      const response = await axiosInstance({
+        method: "post",
+        url: `/listMusics`,
+        headers: {},
+      });
+      let val = await response.data;
+      return val;
+    }
+
+    const musics = await fetchMusics()
+    
+  
+  }
+
+
 
   function showOptions(index){
       if(optionsFlag){
           document.querySelector(`.musicPopup${index}`).style.display = "none"
           document.querySelector(".darkOverlay").style.display = "none"
+
+          document.querySelector(`.musicPopup${index}`).style.zIndex = "initial"
+          document.querySelector(`.playlistMusics-music-options${index}`).style.zIndex = "initial"
+          document.querySelector(".darkOverlay").style.zIndex = "initial"
+
           optionsFlag = 0
       }else{
           document.querySelector(`.musicPopup${index}`).style.display = "flex"
           document.querySelector(".darkOverlay").style.display = "block"
+
+          document.querySelector(`.musicPopup${index}`).style.zIndex = "3"
+          document.querySelector(`.playlistMusics-music-options${index}`).style.zIndex = "3"
+          document.querySelector(".darkOverlay").style.zIndex = "2"
+
           optionsFlag = 1
       }
+  }
+
+  function cancelRemoveMusics(){
+    document.querySelectorAll(".playlistMusics-music").forEach((music) => {
+        music.lastElementChild.style.display = "flex"
+        music.lastElementChild.previousSibling.style.display = "none"
+    })
+
+    document.querySelectorAll(".playlistMusics-music-removeCheckbox").forEach((checkboxDiv) => {
+      checkboxDiv.firstElementChild.checked = false
+    })
+    
+    document.querySelector(".playlistMusics-removeAllMusicsButton").style.display = "none"
+  }
+
+  function selectAllMusics(){
+    document.querySelectorAll(".playlistMusics-music-removeCheckbox").forEach((checkboxDiv) => {
+      checkboxDiv.firstElementChild.checked = true
+    })
+  }
+
+  function showRemoveMusicModal(){
+    let val = removeMusicsPlaylist()
+    console.log(val)
+    if (val.length !== musicArray.length) {
+      props.setSelection(val)
+      document.querySelector(".removeMusicModalDiv").style.display = "block"
+    }
   }
 
   if (props.playlistMusics.length === 0) {
     return (
       <div className="playlistMusics-main">
         <div className="playlistMusics-noMusicDiv">
-          <p>Adicionar música</p>
+          <p onClick={addMusics}>Adicionar música</p>
         </div>
       </div>
     );
@@ -48,19 +127,26 @@ function PlaylistMusics(props) {
                 <p className="playlistMusics-music-text playlistMusics-music-album">{music.album}</p>
                 <p className="playlistMusics-music-text playlistMusics-music-release">{music.releaseDate}</p>
                 <p className="playlistMusics-music-text playlistMusics-music-duration">{music.duration}</p>
-                <div className="playlistMusics-music-options">
+                <div className="playlistMusics-music-removeCheckbox">
+                    <input type="checkbox" value={index} onChange={(event)=>removefromMusicArray(event.target.value)} id={`removeCheckbox${index}`}/>
+                </div>
+                <div className={`playlistMusics-music-options playlistMusics-music-options${index}`}>
                   <img src={optionsButton} alt="" onClick={() => showOptions(index)}/>
                   <div className={`playlistMusics-music-optionsPopup musicPopup${index}`}>
                       <p><img src={likeButton} alt=""/>Curtir</p>
                       <p><img src={downloadButton} alt=""/>Baixar</p>
-                      <p><img src={removeButton} alt=""/>Remover</p>
+                      <p onClick={showRemoveMusicModal}><img src={removeButton} alt=""/>Remover</p>
                   </div>
                 </div>
               </div>
             );
           })}
+          <div className="playlistMusics-removeAllMusicsButton">
+            <p onClick={selectAllMusics}>Selecionar todas</p>
+            <p onClick={showRemoveMusicModal}>Remover</p>
+            <p onClick={cancelRemoveMusics}>Cancelar</p>
+          </div>
         </div>
-      <div className="darkOverlay"></div>
       </div>
     );
   }

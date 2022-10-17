@@ -12,6 +12,7 @@
   height: 1024px;
   overflow: hidden;
   width: 100vw;
+  font-family: 'Roboto';
 }
 
 .outer-container {
@@ -42,11 +43,6 @@
   background-color: #0A0B0E;
 }
 
-.btn{
-  align-items: left;
-  justify-content: left;
-}
-
 .overlap-container {
   height: 50%;
   position: static;
@@ -75,4 +71,13 @@
   margin-left: 1vw;
   padding: 2vh;
   opacity: 0.8 ;
+}
+
+.custom-btn {
+  opacity: 0.7;
+  color: aliceblue;
+}
+
+.custom-btn:hover {
+  color: rgb(236, 6, 148);
 }

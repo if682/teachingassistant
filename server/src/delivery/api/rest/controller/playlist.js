@@ -81,7 +81,7 @@ class DeletePlaylistController {
         if (ucRes.error) {
             return new InternalServerErrorResponse().internalServerError(res, ucRes.error)
         } else {
-            return new SuccessResponse().success(res, ucRes.playlist)
+            return new SuccessResponse().success(res, null)
         }
     }
 }

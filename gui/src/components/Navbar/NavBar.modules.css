@@ -1,0 +1,83 @@
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    background-color: #0A0B0E;
+    padding: 1em;
+    height: 65px;
+}
+
+.ajusteProfile{
+    margin-top: 10px;
+    margin-left: 70px;
+}
+
+.ajusteOptions{
+    margin-top: 10px;
+    margin-right: -75px;
+}
+
+.text-user{
+    position: relative;
+    color: white;
+    right: -10px;
+}
+
+.text-user-music{
+    color: white;
+}
+
+.profilePosition{
+    position: relative;
+    right: 600px;
+    bottom: 20px;
+}
+
+.list{
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.item {
+    margin-right: -36px;
+    margin-bottom: 1em;
+}
+
+.HomeAdjust{
+    position: relative;
+    left: 180px;
+    bottom: 20px;
+}
+
+.HomeAdjustImage{
+    width: 150%;
+    cursor: pointer;
+}
+
+.LibraryAdjust{
+    position: relative;
+    right: -190px;
+    bottom: 15px;
+}
+
+.LibraryAdjustImage{
+    width: 145%;
+    cursor: pointer;
+}
+
+input{
+    position: relative;
+    width: 180%;
+    height: 50px;
+    bottom: 18px;
+    left: 230px;
+    border-radius: 5px;
+    font-size: 25px;
+}
+
+.lupa{
+    background-image: url("../../img/Search.svg") ;
+    background-repeat: no-repeat;
+    background-position: left 5px top 15px;
+    padding-left: 1.3em;
+}
