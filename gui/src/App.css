@@ -1,3 +1,7 @@
+.root, body, .App {
+  overflow-x: hidden !important;
+}
+
 .App {
   text-align: center;
 }
