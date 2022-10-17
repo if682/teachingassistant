@@ -1,6 +1,7 @@
 import { Route, BrowserRouter, Routes} from 'react-router-dom';
 import './App.css';
-import PlaylistHeader from './components/playlistHeader/playlistHeader';
+import Navbar from './components/Navbar/navbar.jsx';
+import Player from './components/Player/Player';
 import Playlist from './components/PlaylistPage/PlaylistPage';
 import ShowList from './components/ShowList/ShowList.jsx';
 import { library } from '@fortawesome/fontawesome-svg-core'
@@ -16,8 +17,8 @@ function App() {
 
   return (
 
-    <div className='container' style={{maxWidth:'1920px'}}>
-      <PlaylistHeader/>
+    <div>
+      <Navbar/>
       <BrowserRouter>
         <Routes>
           <Route
@@ -27,6 +28,7 @@ function App() {
           <Route element={<Playlist></Playlist>} path="/PlaylistPage"></Route>
         </Routes>
       </BrowserRouter>
+      <Player/>
     </div>
   );
 }

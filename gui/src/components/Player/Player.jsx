@@ -1,8 +1,8 @@
 import 'react-h5-audio-player/lib/styles.css';
 import AudioPlayer, { RHAP_UI } from 'react-h5-audio-player';
-import miniplayer from '../img/Album cover.svg';
-import heart from '../img/Heart.svg';
-import demoAudio from '../music/Egzod-Maestro-Chives-Royalty.mp3';
+import miniplayer from '../../img/Album cover.svg';
+import heart from '../../img/Heart.svg';
+import demoAudio from '../../music/Egzod-Maestro-Chives-Royalty.mp3';
 import './Player.modules.css'
 
 function Player(){
