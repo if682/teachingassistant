@@ -1,7 +1,7 @@
-import { CreatePlaylistUseCase, DeletePlaylistUseCase, UpdatePlaylistUseCase } from '../src/domain/playlist.js';
-import { CreatePlaylistUseCaseRequest, DeletePlaylistUseCaseRequest, UpdatePlaylistUseCaseRequest } from '../src/domain/ucio/playlist.js';
-import { CreatePlaylistUseCaseValidate, DeletePlaylistUseCaseValidate, UpdatePlaylistUseCaseValidate } from '../src/infrastructure/provider/validate/playlist.js';
-import { CreatePlaylistUseCaseRepository, DeletePlaylistUseCaseRepository, UpdatePlaylistUseCaseRepository } from '../src/infrastructure/provider/repository/playlist.js';
+import { CreatePlaylistUseCase, DeletePlaylistUseCase, UpdatePlaylistUseCase, GetPlaylistUseCase } from '../src/domain/playlist.js';
+import { CreatePlaylistUseCaseRequest, DeletePlaylistUseCaseRequest, UpdatePlaylistUseCaseRequest, GetPlaylistUseCaseRequest } from '../src/domain/ucio/playlist.js';
+import { CreatePlaylistUseCaseValidate, DeletePlaylistUseCaseValidate, UpdatePlaylistUseCaseValidate, GetPlaylistUseCaseValidate } from '../src/infrastructure/provider/validate/playlist.js';
+import { CreatePlaylistUseCaseRepository, DeletePlaylistUseCaseRepository, UpdatePlaylistUseCaseRepository, GetPlaylistUseCaseRepository } from '../src/infrastructure/provider/repository/playlist.js';
 
 
 describe("O uso de playlist", () => {
@@ -112,7 +112,7 @@ describe("O uso de playlist", () => {
         deletePlaylist();
     })
 
-    // //TESTES DELETANDO PLAYLIST
+    //TESTES DELETANDO PLAYLIST
 
     it("validate deletePlaylist validando playlist correta", () => {
         createPlaylist();
@@ -135,4 +135,33 @@ describe("O uso de playlist", () => {
         expect(deletePlaylist().error).toBe(null);
     })
   
+    //TESTE FUNÇÃO AUXILIAR GET PLAYLIST
+
+    it("validate getPlaylist validando playlist correta", () => {
+        createPlaylist();
+        ucReq = new GetPlaylistUseCaseRequest(newPlaylist.id);    
+        validate = new GetPlaylistUseCaseValidate();
+        expect(validate.getPlaylist(ucReq)).toBe(null);
+        deletePlaylist();
+    })    
+  
+    it("validate getPlaylist validando playlist sem id", () => {
+        createPlaylist();
+        ucReq = new GetPlaylistUseCaseRequest(null);    
+        validate = new GetPlaylistUseCaseValidate();
+        expect(validate.getPlaylist(ucReq)).toBe('O identificador da playlist não pode ser vazio.');
+        deletePlaylist();
+    })    
+
+    it("retornando playlist", () => {
+        createPlaylist();
+        ucReq = new GetPlaylistUseCaseRequest(newPlaylist.id);    
+        validate = new GetPlaylistUseCaseValidate();
+        repository = new GetPlaylistUseCaseRepository();
+        usecase = new GetPlaylistUseCase(validate, repository);
+        response = usecase.getPlaylist(ucReq);
+        expect(response.error).toBe(null);
+        deletePlaylist();
+    })    
+
   })
