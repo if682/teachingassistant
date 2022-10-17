@@ -18,15 +18,14 @@ function App() {
       <PlaylistHeader/>
       <BrowserRouter>
         <Routes>
-
-          <Route element={<ShowList accountID={1} ID={1}></ShowList>} path='/'></Route>
-          <Route element={<Playlist></Playlist>} path='/PlaylistPage'></Route>
-
+          <Route
+            element={<ShowList accountID={1} ID={1}></ShowList>}
+            path="/"
+          ></Route>
+          <Route element={<Playlist></Playlist>} path="/PlaylistPage"></Route>
         </Routes>
       </BrowserRouter>
-  </div>
-
-
+    </div>
   );
 }
 

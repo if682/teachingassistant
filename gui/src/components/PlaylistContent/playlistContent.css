@@ -24,6 +24,10 @@
   display: none;
 }
 
+.removePlaylistModalDiv, .removeMusicModalDiv, .editPlaylistModalDiv {
+  display: none;
+}
+
 .playlistContent-image {
   width: 350px;
   height: 380px;
@@ -105,7 +109,7 @@
 
 .playlistContent-buttons-optionsPopup {
   position: absolute;
-  top: -275px;
+  top: -235px;
   left: -120px;
 
   min-width: 224px;
