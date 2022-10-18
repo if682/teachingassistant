@@ -1,0 +1,120 @@
+.followersListModal-main {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  z-index: 10;
+
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: rgba(0, 0, 0, 0.819);
+  font-family: "Inter";
+}
+
+.followersListModal-main p {
+  margin-bottom: 0;
+}
+
+.followersListModal-modal {
+  width: 40%;
+  padding: 30px 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  gap: 30px;
+
+  background: linear-gradient(
+    152.97deg,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  backdrop-filter: blur(21px);
+  border-radius: 16px;
+}
+
+.followersListModal-modal-followers {
+  width: 70%;
+  max-height: 345px;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.followersListModal-modal-text {
+  max-width: 639px;
+  width: 100%;
+
+  text-align: center;
+
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 58px;
+  letter-spacing: -0.004em;
+
+  color: #ffffff;
+}
+
+.followersListModal-modal-text {
+    max-width: 700px;
+}
+
+.followersListModal-follower {
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+  height: 65px;
+  gap: 10px;
+
+  background-color: rgb(31, 31, 31);
+  border-radius: 10px;
+
+  padding: 8px 20px;
+}
+
+.followersListModal-follower-infos {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  width: 100%;
+}
+
+.followersListModal-follower-infos img {
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+}
+
+.followersListModal-follower-infos-names {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  gap: 2px;
+}
+
+.followersListModal-follower-followerName {
+  font-size: 16px;
+  font-weight: 400;
+  color: white;
+}
+
+.followersListModal-follower-text {
+  font-size: 14px;
+  font-weight: 400;
+  color: #b3b3b3;
+}

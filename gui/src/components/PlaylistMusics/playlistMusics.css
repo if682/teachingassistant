@@ -1,6 +1,6 @@
 .playlistMusics-main {
   width: 100%;
-  height: 600px;
+  height: 602px;
 
   display: flex;
   align-items: flex-start;
@@ -23,6 +23,11 @@
   letter-spacing: -0.004em;
 
   color: #ffffff;
+  cursor: pointer;
+}
+
+.addMusicModalDiv {
+  display: none;
 }
 
 .playlistMusics-removeAllMusicsButton {

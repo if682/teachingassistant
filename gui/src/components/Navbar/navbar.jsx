@@ -7,33 +7,33 @@ import Library from '../../img/Library.svg'
 
 function NavBar(){
     return(
-        <nav className='navbar'> 
+        <nav className='navBar'> 
             <Container>
-                <div className='ajusteProfile'>
-                    <table className='profilePosition'>
+                <div className='navBar-ajusteProfile'>
+                    <table className='navBar-profilePosition'>
                         <tr>
                             <td>
                                 <img src={logo} alt = "Costs"/>
                             </td>
-                            <td className='text-user'>
+                            <td className='navBar-text-user'>
                                 maya <br />
                                 view profile
                             </td>
                         </tr>
                     </table>
                 </div>
-                <div className='ajusteOptions'>
-                    <ul className = 'list'>
-                        <li className="HomeAdjust">
+                <div className='navBar-ajusteOptions'>
+                    <ul className = 'navBar-list'>
+                        <li className="navBar-HomeAdjust">
                             <a href='/'>
-                                <img className="HomeAdjustImage" src={Home} alt="" />
+                                <img className="navBar-HomeAdjustImage" src={Home} alt="" />
                             </a>
                         </li>
-                        <li className="LibraryAdjust">
-                        <img className="LibraryAdjustImage" src={Library} alt="" />
+                        <li className="navBar-LibraryAdjust">
+                        <img className="navBar-LibraryAdjustImage" src={Library} alt="" />
                         </li>
-                        <li className="item">
-                            <input className='lupa' type="text" name='Artists, songs, or podcasts' placeholder='Artists, songs, or podcasts' />
+                        <li className="navBar-item">
+                            <input className='navBar-lupa' type="text" name='Artists, songs, or podcasts' placeholder='Artists, songs, or podcasts'/>
                         </li>
                     </ul>
                 </div>

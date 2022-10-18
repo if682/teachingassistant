@@ -16,7 +16,7 @@ function Player(){
                         <td>
                             <img src={miniplayer} alt = "Costs"/>
                         </td>
-                        <td className='text-user-music'>
+                        <td className='text-user-music' style={{marginRight: "6px"}}>
                             In My Feelings<br />
                             Drake
                         </td>
@@ -30,7 +30,7 @@ function Player(){
                 ] 
                 }
                 layout='stacked-reverse'
-                autoPlay
+                autoPlay={false}
                 src={demoAudio}
                 // other props here
             />

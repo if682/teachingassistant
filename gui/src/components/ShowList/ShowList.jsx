@@ -51,6 +51,10 @@ function ShowList(props) {
     run();
   }, [sort]);
 
+  function showCreatePlaylistModal() {
+    document.querySelector(".createPlaylistModalDiv").style.display = "block";
+  }
+
   return (
     <div className="container-center-horizontal">
       <div className="user-page">
@@ -63,7 +67,7 @@ function ShowList(props) {
                   <button
                     type="button"
                     className="btn btn-outline "
-                    onClick={toggleDropdown}
+                    onClick={showCreatePlaylistModal}
                   >
                     <span className="custom-btn">
                       <FontAwesomeIcon
@@ -119,7 +123,7 @@ function ShowList(props) {
         </div>
       </div>
 
-      <div>
+      <div className="createPlaylistModalDiv">
         <CreatePlaylist
           accountID={props.accountID}
           modalController={CreatePlaylistModal}
