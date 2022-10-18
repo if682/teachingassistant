@@ -62,6 +62,13 @@ class DownloadPlaylistUseCaseValidate {
     }
 }
 
+class ListPlaylistsByCategoryUseCaseValidate {
+    listPlaylistsByCategory(req) {
+        if (isEmpty(req.category)) return 'A categoria não pode ser vazia.'
+        return null
+    }
+}
+
 export {
     CreatePlaylistUseCaseValidate,
     GetPlaylistUseCaseValidate,
@@ -69,6 +76,7 @@ export {
     DeletePlaylistUseCaseValidate,
     ListPlaylistsByNameUseCaseValidate,
     ListPlaylistsByRelevanceUseCaseValidate,
-    DownloadPlaylistUseCaseValidate
+    DownloadPlaylistUseCaseValidate,
+    ListPlaylistsByCategoryUseCaseValidate
 
 }

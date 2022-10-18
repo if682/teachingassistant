@@ -1,7 +1,7 @@
-import { CreatePlaylistUseCase, DeletePlaylistUseCase, DownloadPlaylistUseCase, GetPlaylistUseCase, ListPlaylistsByNameUseCase, ListPlaylistsByRelevanceUseCase, ListPlaylistsUseCase, UpdatePlaylistUseCase } from '../../../../domain/playlist.js'
-import { CreatePlaylistUseCaseRequest, DeletePlaylistUseCaseRequest, DownloadPlaylistUseCaseRequest, GetPlaylistUseCaseRequest, ListPlaylistsByNameUseCaseRequest, ListPlaylistsByRelevanceUseCaseRequest, UpdatePlaylistUseCaseRequest } from '../../../../domain/ucio/playlist.js'
-import { CreatePlaylistUseCaseRepository, DeletePlaylistUseCaseRepository, DownloadPlaylistUseCaseRepository, GetPlaylistUseCaseRepository, ListPlaylistsByNameUseCaseRepository, ListPlaylistsByRelevanceUseCaseRepository, ListPlaylistsUseCaseRepository, UpdatePlaylistUseCaseRepository } from '../../../../infrastructure/provider/repository/playlist.js'
-import { CreatePlaylistUseCaseValidate, DeletePlaylistUseCaseValidate, DownloadPlaylistUseCaseValidate, GetPlaylistUseCaseValidate, ListPlaylistsByNameUseCaseValidate, ListPlaylistsByRelevanceUseCaseValidate, UpdatePlaylistUseCaseValidate } from '../../../../infrastructure/provider/validate/playlist.js'
+import { CreatePlaylistUseCase, DeletePlaylistUseCase, DownloadPlaylistUseCase, GetPlaylistUseCase, ListPlaylistsByCategoryUseCase, ListPlaylistsByNameUseCase, ListPlaylistsByRelevanceUseCase, ListPlaylistsUseCase, UpdatePlaylistUseCase } from '../../../../domain/playlist.js'
+import { CreatePlaylistUseCaseRequest, DeletePlaylistUseCaseRequest, DownloadPlaylistUseCaseRequest, GetPlaylistUseCaseRequest, ListPlaylistsByCategoryUseCaseRequest, ListPlaylistsByNameUseCaseRequest, ListPlaylistsByRelevanceUseCaseRequest, UpdatePlaylistUseCaseRequest } from '../../../../domain/ucio/playlist.js'
+import { CreatePlaylistUseCaseRepository, DeletePlaylistUseCaseRepository, DownloadPlaylistUseCaseRepository, GetPlaylistUseCaseRepository, ListPlaylistsByCategoryUseCaseRepository, ListPlaylistsByNameUseCaseRepository, ListPlaylistsByRelevanceUseCaseRepository, ListPlaylistsUseCaseRepository, UpdatePlaylistUseCaseRepository } from '../../../../infrastructure/provider/repository/playlist.js'
+import { CreatePlaylistUseCaseValidate, DeletePlaylistUseCaseValidate, DownloadPlaylistUseCaseValidate, GetPlaylistUseCaseValidate, ListPlaylistsByCategoryUseCaseValidate, ListPlaylistsByNameUseCaseValidate, ListPlaylistsByRelevanceUseCaseValidate, UpdatePlaylistUseCaseValidate } from '../../../../infrastructure/provider/validate/playlist.js'
 import { SuccessResponse , InternalServerErrorResponse } from '../response/response.js'
 class CreatePlaylistController {
     createPlaylist(req,res) {
@@ -165,6 +165,26 @@ class ListPlaylistsController {
     }
 }
 
+class ListPlaylistsByCategoryController {
+    listPlaylistsByCategory(req, res) {
+        const { category } = req.body  
+        const ucReq = new ListPlaylistsByCategoryUseCaseRequest(category)
+
+        const validate = new ListPlaylistsByCategoryUseCaseValidate()
+        const repository = new ListPlaylistsByCategoryUseCaseRepository()
+
+        const usecase = new ListPlaylistsByCategoryUseCase(validate, repository)
+
+        const ucRes = usecase.listPlaylistsByCategory(ucReq)
+
+        if (ucRes.error) {
+            return new InternalServerErrorResponse().internalServerError(res, ucRes.error)
+        } else {
+            return new SuccessResponse().success(res, ucRes.playlists)
+        }
+    }
+}
+
 export {
     CreatePlaylistController,
     GetPlaylistController,
@@ -173,5 +193,6 @@ export {
     ListPlaylistsByNameController,
     ListPlaylistsByRelevanceController,
     DownloadPlaylistController,
-    ListPlaylistsController
+    ListPlaylistsController,
+    ListPlaylistsByCategoryController
 }

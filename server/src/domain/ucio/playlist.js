@@ -104,6 +104,19 @@ class ListPlaylistsUseCaseResponse {
     }
 }
 
+class ListPlaylistsByCategoryUseCaseRequest {
+    constructor(category) {
+        this.category = category
+    }
+}
+
+class ListPlaylistsByCategoryUseCaseResponse {
+    constructor(playlists, error) {
+        this.playlists = playlists
+        this.error = error
+    }
+}
+
 export {
     CreatePlaylistUseCaseRequest,
     CreatePlaylistUseCaseResponse,
@@ -119,5 +132,7 @@ export {
     ListPlaylistsByRelevanceUseCaseResponse,
     DownloadPlaylistUseCaseRequest,
     DownloadPlaylistUseCaseResponse,
-    ListPlaylistsUseCaseResponse
+    ListPlaylistsUseCaseResponse,
+    ListPlaylistsByCategoryUseCaseRequest,
+    ListPlaylistsByCategoryUseCaseResponse
 }

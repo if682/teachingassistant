@@ -1,4 +1,4 @@
-import {CreatePlaylistUseCaseResponse, DeletePlaylistUseCaseResponse, DownloadPlaylistUseCaseResponse, GetPlaylistUseCaseResponse, ListPlaylistsByNameUseCaseResponse, ListPlaylistsByRelevanceUseCaseResponse, ListPlaylistsUseCaseResponse, UpdatePlaylistUseCaseResponse } from './ucio/playlist.js'
+import {CreatePlaylistUseCaseResponse, DeletePlaylistUseCaseResponse, DownloadPlaylistUseCaseResponse, GetPlaylistUseCaseResponse, ListPlaylistsByCategoryUseCaseResponse, ListPlaylistsByNameUseCaseResponse, ListPlaylistsByRelevanceUseCaseResponse, ListPlaylistsUseCaseResponse, UpdatePlaylistUseCaseResponse } from './ucio/playlist.js'
 class CreatePlaylistUseCase {
     constructor(validate, repository) {
         this.validate = validate
@@ -191,6 +191,30 @@ class ListPlaylistsUseCase {
     }
 }
 
+class ListPlaylistsByCategoryUseCase {
+    constructor(validate, repository) {
+        this.validate = validate
+        this.repository = repository
+    }
+
+    listPlaylistsByCategory(req) {
+        try {
+            const errorMessage = this.validate.listPlaylistsByCategory(req)
+
+            if (!errorMessage) {
+                const data = this.repository.listPlaylistsByCategory(req.category)
+                return new ListPlaylistsByCategoryUseCaseResponse(data, null)
+            } else {
+                console.log('ERRO DE VALIDAÇÃO:', errorMessage)
+                return new ListPlaylistsByCategoryUseCaseResponse(null, errorMessage)
+            }
+        } catch (error) {
+            console.log('ERRO INTERNO DO SERVIDOR:', error)
+            return new ListPlaylistsByCategoryUseCaseResponse(null, error.message)
+        }
+    }
+}
+
 export {
     CreatePlaylistUseCase,
     GetPlaylistUseCase,
@@ -199,5 +223,6 @@ export {
     ListPlaylistsByNameUseCase,
     ListPlaylistsByRelevanceUseCase,
     DownloadPlaylistUseCase,
-    ListPlaylistsUseCase
+    ListPlaylistsUseCase,
+    ListPlaylistsByCategoryUseCase
 }
