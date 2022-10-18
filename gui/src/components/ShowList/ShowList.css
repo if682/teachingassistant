@@ -1,8 +1,3 @@
-.container {
-  width: 100%;
-  margin: 0 auto;
-}
-
 .createPlaylistModalDiv {
   display: none;
 }
@@ -13,10 +8,11 @@
   border: 1px none;
   display: flex;
   flex-direction: column;
-  height: 100vh;
   overflow: hidden;
   width: 100vw;
   font-family: "Roboto";
+
+  margin-top: -2px;
 }
 
 .outer-container {
