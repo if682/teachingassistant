@@ -130,6 +130,13 @@ function listPlaylists() {
     return playlists ? playlists : []
 }
 
+function listPlaylistsByCategory(category) {
+    let table = readDB('playlists')
+    let playlists = table.filter(el => el.category === category)
+    return playlists ? playlists : []
+}
+
+
 export {
     createPlaylist,
     getPlaylist,
@@ -138,5 +145,6 @@ export {
     listPlaylistsByName,
     listPlaylistsByRelevance,
     downloadPlaylist,
-    listPlaylists
+    listPlaylists,
+    listPlaylistsByCategory
 }
