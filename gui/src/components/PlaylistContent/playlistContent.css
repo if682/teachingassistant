@@ -24,7 +24,10 @@
   display: none;
 }
 
-.removePlaylistModalDiv, .removeMusicModalDiv, .editPlaylistModalDiv, .followersListModalDiv {
+.removePlaylistModalDiv,
+.removeMusicModalDiv,
+.editPlaylistModalDiv,
+.followersListModalDiv {
   display: none;
 }
 
