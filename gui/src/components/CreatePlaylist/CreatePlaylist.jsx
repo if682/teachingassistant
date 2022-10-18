@@ -29,6 +29,7 @@ function CreatePlaylist(props) {
     setErrorMessage(undefined);
     setPlaylistName("");
     setPlaylistCategory(undefined);
+    document.querySelector(".createPlaylistModalDiv").style.display = "none";
   };
 
   const handlePlaylistImage = async function (event) {

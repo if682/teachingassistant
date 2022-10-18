@@ -1,26 +1,33 @@
-.rhap_container{
-    background-color: #0A0B0E !important;
-  }
-  .rhap_progress-filled{
-    background-color: #DE0F72 !important;
-  }
-  .rhap_progress-indicator{
-    visibility: hidden;
-  }
-  .rhap_progress-section{
-    width: 75%;
-    align-self: center;
-  }
-  .image_music{
-    position: relative;
-    top: 20px;
-  }
-  
-  .rhap_volume-container{
-    position: relative;
-    top:20px
-  }
-  .rhap_repeat-button{
-    position: absolute;
-    left: 1390px;
-  }
+.rhap_container {
+  background-color: #0a0b0e !important;
+}
+.rhap_progress-filled {
+  background-color: #de0f72 !important;
+}
+.rhap_progress-indicator {
+  visibility: hidden;
+}
+.rhap_progress-section {
+  width: 75%;
+  align-self: center;
+}
+.image_music {
+  position: relative;
+  top: 20px;
+}
+
+.image_music tr {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-family: "inter";
+}
+
+.rhap_volume-container {
+  position: relative;
+  top: 20px;
+}
+.rhap_repeat-button {
+  position: absolute;
+  left: 765px;
+}

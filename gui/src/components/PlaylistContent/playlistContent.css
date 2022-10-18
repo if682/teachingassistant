@@ -1,6 +1,6 @@
 .playlistContent-main {
   width: 350px;
-  min-height: 600px;
+  min-height: 602px;
 
   display: flex;
   justify-content: flex-start;
@@ -24,7 +24,7 @@
   display: none;
 }
 
-.removePlaylistModalDiv, .removeMusicModalDiv, .editPlaylistModalDiv {
+.removePlaylistModalDiv, .removeMusicModalDiv, .editPlaylistModalDiv, .followersListModalDiv {
   display: none;
 }
 
@@ -42,6 +42,11 @@
 .playlistContent-image img {
   width: 41px;
   height: 41px;
+}
+
+.playlistContent-followHeart {
+  width: 33px;
+  height: 33px;
 }
 
 .playlistContent-image p {
